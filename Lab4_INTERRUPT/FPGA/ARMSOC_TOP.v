@@ -519,7 +519,7 @@ module ARMSOC_TOP (
         .HSEL(hsel_uart),
 	
         .RsRx(UART_RXD),
-        .RsTx(UART_TXD)
+        .RsTx(UART_TXD),
         .uart_irq(uart_irq)
     );
 
@@ -534,7 +534,7 @@ module ARMSOC_TOP (
         .HREADY(hreadys),
         .HREADYOUT(hready_timer),
         .HRDATA(hrdata_timer),
-        .HSEL(hsel_timer)
+        .HSEL(hsel_timer),
         .timer_irq(timer_irq)
     );
 

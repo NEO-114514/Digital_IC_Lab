@@ -1,0 +1,311 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Fri Sep 27 18:06:43 2024
+| Host         : HUNTER running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file ARMSOC_TOP_control_sets_placed.rpt
+| Design       : ARMSOC_TOP
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   233 |
+|    Minimum number of control sets                        |   233 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   555 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   233 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |    44 |
+| >= 6 to < 8        |    26 |
+| >= 8 to < 10       |    77 |
+| >= 10 to < 12      |     9 |
+| >= 12 to < 14      |     7 |
+| >= 14 to < 16      |     2 |
+| >= 16              |    63 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             654 |          372 |
+| No           | No                    | Yes                    |            1826 |          970 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |            1513 |          601 |
+| Yes          | No                    | Yes                    |            1244 |          485 |
+| Yes          | Yes                   | No                     |              16 |            2 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+
+|  Clock Signal  |                      Enable Signal                      |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count |
++----------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Z8ha17_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                1 |              1 |
+|  CLK_IBUF_BUFG |                                                         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/RESET          |                1 |              1 |
+| ~TCK_IBUF_BUFG |                                                         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |                2 |              2 |
+|  TCK_IBUF_BUFG |                                                         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/RESET          |                1 |              2 |
+|  fclk          |                                                         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/RESET          |                1 |              3 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Efhov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                2 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Wmcov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Wsciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/B4nzz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/U21jy6         |                                                         |                1 |              4 |
+|  TCK_IBUF_BUFG | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Pqthw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/At8m17_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Avciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Vainz6_i_1_n_0 |                                                         |                3 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/p_4876_in      | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Atws07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/p_12275_in     |                                                         |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ktciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Rconv6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Kkmoz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Fknov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                3 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Qwciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Q01jy6         |                                                         |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Zdo7v6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/O5a7z6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/K31jy6         |                                                         |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Vfeiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ovciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Na3nv6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                4 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Muciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/G11jy6         |                                                         |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ytciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Cwciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                1 |              4 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Alo7x6         |                                                         |                2 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Udkov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                2 |              5 |
+|  TCK_IBUF_BUFG | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Vedoz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |                5 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Soeiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/S31jy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Hglhw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                2 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Fftnv6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Cjliy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/p_8434_in      | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/L2joz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                4 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Sblov6         |                                                         |                4 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/M21jy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Zidiw6         |                                                         |                3 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Gaog07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Gecov6         |                                                         |                2 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Z73iw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              5 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ieciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Rabov6         |                                                         |                3 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Rfciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                4 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Zabu07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Dfciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/E4dt07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Fhbiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Vfmov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                6 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Weciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ba4u07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Beciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Xk8oz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yfciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/K4vt07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Kfciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                4 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Phht07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Cjbiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/O11jy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Oibiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Peciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              6 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/p_3584_in      | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              7 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/p_7995_in      | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                4 |              7 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Y81jy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              7 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Rem7x6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                3 |              7 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Eq2nz6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              7 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Xaqm17_i_1_n_0 |                                                         |                1 |              7 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/J4ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Knniy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ue5ov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                1 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ktjiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                1 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Wtziy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ug5xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ee6xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Le6xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/K45xx6         |                                                         |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Zr7xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Dg4iw6         |                                                         |                5 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/M46xx6         |                                                         |                4 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Me9g07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/On9xx6         |                                                         |                2 |              8 |
+|  fclk          | uAHB2LED/rLED                                           | reg_sys_rst_n_reg_inv_n_0                               |                2 |              8 |
+|  fclk          | uAHB2LED/rMask                                          | reg_sys_rst_n_reg_inv_n_0                               |                2 |              8 |
+|  fclk          | uAHB2RAM/E[0]                                           | reg_sys_rst_n_reg_inv_n_0                               |                5 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/W92jy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Mu1jy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ne5ov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Alo7x6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Dpz917_i_1_n_0 |                1 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jp8xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ng5xx6         |                                                         |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ns7xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/O3ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ytjiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Or5xx6         |                                                         |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ge5ov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Gs7xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Vr5xx6         |                                                         |                4 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Fujiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                4 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/H3ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/P9get6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Xd6xx6         |                                                         |                4 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ab5ov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ps5iw6         |                                                         |                7 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Qogu07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                4 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Qp8xx6         |                                                         |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Qxbiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Alo7x6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Aaz917_i_1_n_0 |                1 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Fp2b17_i_1_n_0 |                                                         |                1 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Aw1jy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R1ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/B57iw6         |                                                         |                7 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/B22yx6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/K1ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Rgbiw6         |                                                         |                4 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Bh5xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Blea17_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ry1yx6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/F46xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/C71jy6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Cp8xx6         |                                                         |                1 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Cr2b17_i_1_n_0 |                                                         |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Cs5xx6         |                                                         |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/D12yx6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/D45xx6         |                                                         |                3 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jh4nz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Sv1jy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                4 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/F2ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                5 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/T2ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Mh67x6         |                                                         |                8 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/T46xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R45xx6         |                                                         |                2 |              8 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/H3fm17_i_1_n_0 |                                                         |                3 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Loem17_i_1_n_0 |                                                         |                2 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ljem17_i_1_n_0 |                                                         |                2 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Lh6yx6         |                                                         |                5 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ld6yx6         |                                                         |                2 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/L96yx6         |                                                         |                2 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Pz5yx6         |                                                         |                2 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Wvem17_i_1_n_0 |                                                         |                3 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Qu1ov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                2 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Kboh07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                3 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Maznz6_i_1_n_0 |                                                         |                2 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ahem17_i_1_n_0 |                                                         |                2 |              9 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Oaqh07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                2 |              9 |
+|  TCK_IBUF_BUFG | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/G7kzz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |                3 |             10 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Fs0g07_i_1_n_0 |                                                         |                3 |             10 |
+|  TCK_IBUF_BUFG | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Imhoz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |                4 |             10 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Mphiw6         |                                                         |                3 |             10 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ua1jy6         |                                                         |                3 |             11 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/M61jy6         |                                                         |                3 |             11 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Rrlh07_i_1_n_0 |                                                         |                3 |             11 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Wvd917_i_1_n_0 |                                                         |                7 |             11 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Lidiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                8 |             11 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yk9g07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                4 |             12 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ac2t07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                4 |             12 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ut4ov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                5 |             12 |
+|  TCK_IBUF_BUFG | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Toxhw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |                4 |             12 |
+|  TCK_IBUF_BUFG | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Myyiy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |                4 |             12 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ammhw6         |                                                         |                7 |             12 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/O1ynz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                5 |             13 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/O91jy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                7 |             14 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Q52et6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                6 |             14 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/G91jy6         |                                                         |                5 |             16 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ehfhw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                5 |             16 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/p_5476_in      | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                5 |             16 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Sdo7v6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                7 |             17 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Cabzz6_i_1_n_0 |                                                         |                4 |             18 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/G8eh07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |               11 |             23 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/L4kiw6         |                                                         |                7 |             24 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Nlbiw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                9 |             25 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Tiiu07_i_1_n_0 |                                                         |                5 |             25 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Pv2u07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |               12 |             26 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/W7ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |               12 |             26 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/N3qt07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |               12 |             26 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/G6ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |               13 |             26 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/S5ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |               11 |             26 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/F8kiw6         |                                                         |                7 |             27 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/A9kiw6         |                                                         |               11 |             27 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/E5ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |               14 |             27 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/B7ciw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |               16 |             27 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Q4yiy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |               13 |             28 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/B6kiw6         |                                                         |                9 |             29 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/N5kiw6         |                                                         |                8 |             29 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/D7kiw6         |                                                         |                5 |             29 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/P6kiw6         |                                                         |                6 |             29 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R7kiw6         |                                                         |                8 |             29 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Z4kiw6         |                                                         |                9 |             29 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/p_7007_in      | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |                9 |             29 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ebyiw6         |                                                         |               15 |             30 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Kkm007_i_1_n_0 |                                                         |               15 |             30 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Hn5yx6         |                                                         |                8 |             31 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ag9u07_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |                8 |             31 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Xux007_i_1_n_0 |                                                         |               18 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Tmyiw6         |                                                         |               12 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/I9k007_i_1_n_0 |                                                         |               15 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Pdyiw6         |                                                         |                9 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Qoyiw6         |                                                         |               15 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Wj1ov6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |               10 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/W11jy6         |                                                         |               15 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Me0iw6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |                8 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/A41jy6         |                                                         |               12 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Hdd007_i_1_n_0 |                                                         |               15 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Gyh007_i_1_n_0 |                                                         |               19 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/G1r007_i_1_n_0 |                                                         |               19 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/F0eiw6         |                                                         |                9 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ykziw6         |                                                         |               17 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Enf007_i_1_n_0 |                                                         |               20 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Dbt007_i_1_n_0 |                                                         |               20 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/E21jy6         |                                                         |               13 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/I41jy6         |                                                         |               13 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/K3b007_i_1_n_0 |                                                         |               18 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Pkyiw6         |                                                         |               21 |             32 |
+|  TCK_IBUF_BUFG | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ueyiy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |                6 |             32 |
+|  TCK_IBUF_BUFG | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Bwrzz6_i_1_n_0 | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |               11 |             32 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klyiw6         |                                                         |               16 |             32 |
+|  TCK_IBUF_BUFG | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Q0yiy6         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |                9 |             34 |
+|  fclk          | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Bq4yx6         |                                                         |               14 |             40 |
+|  TCK_IBUF_BUFG |                                                         |                                                         |               24 |             44 |
+|  fclk          |                                                         | reg_sys_rst_n_reg_inv_n_0                               |               20 |             46 |
+|  fclk          |                                                         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Rjwm17_i_2_n_0 |               38 |             92 |
+|  TCK_IBUF_BUFG |                                                         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Jkdoz6_i_2_n_0 |               58 |            128 |
+|  fclk          |                                                         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/R2e917_i_2_n_0 |              281 |            418 |
+|  fclk          |                                                         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Yo2nz6_i_1_n_0 |              224 |            508 |
+|  fclk          |                                                         |                                                         |              348 |            610 |
+|  fclk          |                                                         | u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Klgg07_i_2_n_0 |              344 |            626 |
++----------------+---------------------------------------------------------+---------------------------------------------------------+------------------+----------------+
+
+

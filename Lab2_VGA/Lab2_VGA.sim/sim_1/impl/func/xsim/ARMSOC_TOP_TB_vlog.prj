@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../Lab2_VGA.srcs/sources_1/ip/clk_50M" --include "../../../../../Lab2_VGA.srcs/sources_1/ip/clk_40M" \
+"ARMSOC_TOP_TB_func_impl.v" \
+"../../../../../FPGA/ARMSOC_TOP_TB.v" \
+
+# Do not sort compile order
+nosort

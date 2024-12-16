@@ -1,0 +1,6 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/ARMSOC_TOP_TB.v,1729590622,verilog,,,,ARMSOC_TOP_TB,,,../../../../../Lab2_VGA.srcs/sources_1/ip/clk_40M;../../../../../Lab2_VGA.srcs/sources_1/ip/clk_50M,,,,,
+D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/Lab2_VGA.sim/sim_1/impl/func/xsim/ARMSOC_TOP_TB_func_impl.v,1731248016,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/ARMSOC_TOP_TB.v,,ARMSOC_TOP;CORTEXM3INTEGRATIONDS;clk_40M;clk_40M_clk_40M_clk_wiz;clk_50M;clk_50M_clk_50M_clk_wiz;cortexm3ds_logic;glbl,,,../../../../../Lab2_VGA.srcs/sources_1/ip/clk_40M;../../../../../Lab2_VGA.srcs/sources_1/ip/clk_50M,,,,,

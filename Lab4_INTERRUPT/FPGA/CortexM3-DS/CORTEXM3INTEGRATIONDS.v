@@ -1,0 +1,133 @@
+// Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+// --------------------------------------------------------------------------------
+// Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+// Date        : Fri Oct 16 13:27:50 2020
+// Host        : DESKTOP-CFTAM3R running 64-bit major release  (build 9200)
+// Command     : write_verilog -mode synth_stub D:/work/armsoc/cortex-m3.v
+// Design      : CORTEXM3INTEGRATIONDS
+// Purpose     : Stub declaration of top-level module interface
+// Device      : xc7a100tcsg324-1
+// --------------------------------------------------------------------------------
+
+// This empty module with port declaration file causes synthesis tools to infer a black box for IP.
+// The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
+// Please paste the declaration into a Verilog source file or add the file as an additional source.
+module CORTEXM3INTEGRATIONDS(ISOLATEn, RETAINn, nTRST, SWCLKTCK, SWDITMS, TDI, 
+  PORESETn, SYSRESETn, RSTBYPASS, CGBYPASS, FCLK, HCLK, TRACECLKIN, STCLK, STCALIB, AUXFAULT, BIGEND, 
+  INTISR, INTNMI, HREADYI, HRDATAI, HRESPI, IFLUSH, HREADYD, HRDATAD, HRESPD, EXRESPD, SE, HREADYS, 
+  HRDATAS, HRESPS, EXRESPS, EDBGRQ, DBGRESTART, RXEV, SLEEPHOLDREQn, WICENREQ, FIXMASTERTYPE, 
+  TSVALUEB, MPUDISABLE, DBGEN, NIDEN, CDBGPWRUPACK, DNOTITRANS, TDO, nTDOEN, SWDOEN, SWDO, SWV, JTAGNSW, 
+  TRACECLK, TRACEDATA, HTRANSI, HSIZEI, HADDRI, HBURSTI, HPROTI, MEMATTRI, HTRANSD, HSIZED, HADDRD, 
+  HBURSTD, HPROTD, MEMATTRD, HMASTERD, EXREQD, HWRITED, HWDATAD, HTRANSS, HSIZES, HADDRS, HBURSTS, 
+  HPROTS, MEMATTRS, HMASTERS, EXREQS, HWRITES, HWDATAS, HMASTLOCKS, BRCHSTAT, HALTED, LOCKUP, SLEEPING, 
+  SLEEPDEEP, ETMINTNUM, ETMINTSTAT, SYSRESETREQ, TXEV, TRCENA, CURRPRI, DBGRESTARTED, 
+  SLEEPHOLDACKn, GATEHCLK, HTMDHADDR, HTMDHTRANS, HTMDHSIZE, HTMDHBURST, HTMDHPROT, HTMDHWDATA, 
+  HTMDHWRITE, HTMDHRDATA, HTMDHREADY, HTMDHRESP, WICENACK, WAKEUP, CDBGPWRUPREQ)
+/* synthesis syn_black_box black_box_pad_pin="ISOLATEn,RETAINn,nTRST,SWCLKTCK,SWDITMS,TDI,PORESETn,SYSRESETn,RSTBYPASS,CGBYPASS,FCLK,HCLK,TRACECLKIN,STCLK,STCALIB[25:0],AUXFAULT[31:0],BIGEND,INTISR[239:0],INTNMI,HREADYI,HRDATAI[31:0],HRESPI[1:0],IFLUSH,HREADYD,HRDATAD[31:0],HRESPD[1:0],EXRESPD,SE,HREADYS,HRDATAS[31:0],HRESPS[1:0],EXRESPS,EDBGRQ,DBGRESTART,RXEV,SLEEPHOLDREQn,WICENREQ,FIXMASTERTYPE,TSVALUEB[47:0],MPUDISABLE,DBGEN,NIDEN,CDBGPWRUPACK,DNOTITRANS,TDO,nTDOEN,SWDOEN,SWDO,SWV,JTAGNSW,TRACECLK,TRACEDATA[3:0],HTRANSI[1:0],HSIZEI[2:0],HADDRI[31:0],HBURSTI[2:0],HPROTI[3:0],MEMATTRI[1:0],HTRANSD[1:0],HSIZED[2:0],HADDRD[31:0],HBURSTD[2:0],HPROTD[3:0],MEMATTRD[1:0],HMASTERD[1:0],EXREQD,HWRITED,HWDATAD[31:0],HTRANSS[1:0],HSIZES[2:0],HADDRS[31:0],HBURSTS[2:0],HPROTS[3:0],MEMATTRS[1:0],HMASTERS[1:0],EXREQS,HWRITES,HWDATAS[31:0],HMASTLOCKS,BRCHSTAT[3:0],HALTED,LOCKUP,SLEEPING,SLEEPDEEP,ETMINTNUM[8:0],ETMINTSTAT[2:0],SYSRESETREQ,TXEV,TRCENA,CURRPRI[7:0],DBGRESTARTED,SLEEPHOLDACKn,GATEHCLK,HTMDHADDR[31:0],HTMDHTRANS[1:0],HTMDHSIZE[2:0],HTMDHBURST[2:0],HTMDHPROT[3:0],HTMDHWDATA[31:0],HTMDHWRITE,HTMDHRDATA[31:0],HTMDHREADY,HTMDHRESP[1:0],WICENACK,WAKEUP,CDBGPWRUPREQ" */;
+  input ISOLATEn;
+  input RETAINn;
+  input nTRST;
+  input SWCLKTCK;
+  input SWDITMS;
+  input TDI;
+  input PORESETn;
+  input SYSRESETn;
+  input RSTBYPASS;
+  input CGBYPASS;
+  input FCLK;
+  input HCLK;
+  input TRACECLKIN;
+  input STCLK;
+  input [25:0]STCALIB;
+  input [31:0]AUXFAULT;
+  input BIGEND;
+  input [239:0]INTISR;
+  input INTNMI;
+  input HREADYI;
+  input [31:0]HRDATAI;
+  input [1:0]HRESPI;
+  input IFLUSH;
+  input HREADYD;
+  input [31:0]HRDATAD;
+  input [1:0]HRESPD;
+  input EXRESPD;
+  input SE;
+  input HREADYS;
+  input [31:0]HRDATAS;
+  input [1:0]HRESPS;
+  input EXRESPS;
+  input EDBGRQ;
+  input DBGRESTART;
+  input RXEV;
+  input SLEEPHOLDREQn;
+  input WICENREQ;
+  input FIXMASTERTYPE;
+  input [47:0]TSVALUEB;
+  input MPUDISABLE;
+  input DBGEN;
+  input NIDEN;
+  input CDBGPWRUPACK;
+  input DNOTITRANS;
+  output TDO;
+  output nTDOEN;
+  output SWDOEN;
+  output SWDO;
+  output SWV;
+  output JTAGNSW;
+  output TRACECLK;
+  output [3:0]TRACEDATA;
+  output [1:0]HTRANSI;
+  output [2:0]HSIZEI;
+  output [31:0]HADDRI;
+  output [2:0]HBURSTI;
+  output [3:0]HPROTI;
+  output [1:0]MEMATTRI;
+  output [1:0]HTRANSD;
+  output [2:0]HSIZED;
+  output [31:0]HADDRD;
+  output [2:0]HBURSTD;
+  output [3:0]HPROTD;
+  output [1:0]MEMATTRD;
+  output [1:0]HMASTERD;
+  output EXREQD;
+  output HWRITED;
+  output [31:0]HWDATAD;
+  output [1:0]HTRANSS;
+  output [2:0]HSIZES;
+  output [31:0]HADDRS;
+  output [2:0]HBURSTS;
+  output [3:0]HPROTS;
+  output [1:0]MEMATTRS;
+  output [1:0]HMASTERS;
+  output EXREQS;
+  output HWRITES;
+  output [31:0]HWDATAS;
+  output HMASTLOCKS;
+  output [3:0]BRCHSTAT;
+  output HALTED;
+  output LOCKUP;
+  output SLEEPING;
+  output SLEEPDEEP;
+  output [8:0]ETMINTNUM;
+  output [2:0]ETMINTSTAT;
+  output SYSRESETREQ;
+  output TXEV;
+  output TRCENA;
+  output [7:0]CURRPRI;
+  output DBGRESTARTED;
+  output SLEEPHOLDACKn;
+  output GATEHCLK;
+  output [31:0]HTMDHADDR;
+  output [1:0]HTMDHTRANS;
+  output [2:0]HTMDHSIZE;
+  output [2:0]HTMDHBURST;
+  output [3:0]HTMDHPROT;
+  output [31:0]HTMDHWDATA;
+  output HTMDHWRITE;
+  output [31:0]HTMDHRDATA;
+  output HTMDHREADY;
+  output [1:0]HTMDHRESP;
+  output WICENACK;
+  output WAKEUP;
+  output CDBGPWRUPREQ;
+endmodule

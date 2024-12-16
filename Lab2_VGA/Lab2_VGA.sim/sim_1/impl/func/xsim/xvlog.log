@@ -1,0 +1,11 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/Lab2_VGA.sim/sim_1/impl/func/xsim/ARMSOC_TOP_TB_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ARMSOC_TOP
+INFO: [VRFC 10-311] analyzing module CORTEXM3INTEGRATIONDS
+INFO: [VRFC 10-311] analyzing module clk_40M
+INFO: [VRFC 10-311] analyzing module clk_40M_clk_40M_clk_wiz
+INFO: [VRFC 10-311] analyzing module clk_50M
+INFO: [VRFC 10-311] analyzing module clk_50M_clk_50M_clk_wiz
+INFO: [VRFC 10-311] analyzing module cortexm3ds_logic
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/ARMSOC_TOP_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ARMSOC_TOP_TB

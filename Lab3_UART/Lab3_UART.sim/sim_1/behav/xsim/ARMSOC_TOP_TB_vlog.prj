@@ -1,0 +1,31 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Lab3_UART.srcs/sources_1/ip/clk_25M" --include "../../../../Lab3_UART.srcs/sources_1/ip/clk_50M" \
+"../../../../Lab3_UART.srcs/sources_1/ip/clk_25M/clk_25M_clk_wiz.v" \
+"../../../../Lab3_UART.srcs/sources_1/ip/clk_25M/clk_25M.v" \
+"../../../../Lab3_UART.srcs/sources_1/ip/clk_50M/clk_50M_clk_wiz.v" \
+"../../../../Lab3_UART.srcs/sources_1/ip/clk_50M/clk_50M.v" \
+"../../../../FPGA/AHB_BRAM/AHB2BRAM.v" \
+"../../../../FPGA/AHB_BUS/AHBDCD.v" \
+"../../../../FPGA/AHB_BUS/AHBMUX.v" \
+"../../../../FPGA/AHB_UART/AHBUART.v" \
+"../../../../FPGA/AHB_VGA/AHBVGASYS.v" \
+"../../../../FPGA/ARMSOC_TOP.v" \
+"../../../../FPGA/CortexM3-DS-sim/CORTEXM3INTEGRATIONDS.v" \
+"../../../../FPGA/AHB_UART/baudgen.v" \
+"../../../../FPGA/CortexM3-DS/cortexm3ds_logic.v" \
+"../../../../FPGA/AHB_VGA/counter.v" \
+"../../../../FPGA/AHB_VGA/dual_port_ram_sync.v" \
+"../../../../FPGA/AHB_UART/fifo.v" \
+"../../../../FPGA/AHB_VGA/font_rom.v" \
+"../../../../FPGA/AHB_UART/uart_rx.v" \
+"../../../../FPGA/AHB_UART/uart_tx.v" \
+"../../../../FPGA/AHB_VGA/vga_console.v" \
+"../../../../FPGA/AHB_VGA/vga_image.v" \
+"../../../../FPGA/AHB_VGA/vga_sync.v" \
+"../../../../FPGA/ARMSOC_TOP_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,7 @@
+Running: xsim.dir/ARMSOC_TOP_TB_func_impl/xsimk.exe -simmode gui -wdb ARMSOC_TOP_TB_func_impl.wdb -simrunnum 0 -socket 1513
+Design successfully loaded
+Design Loading Memory Usage: 111468 KB (Peak: 111468 KB)
+Design Loading CPU Usage: 264 ms
+Simulation completed
+Simulation Memory Usage: 123884 KB (Peak: 123884 KB)
+Simulation CPU Usage: 608 ms

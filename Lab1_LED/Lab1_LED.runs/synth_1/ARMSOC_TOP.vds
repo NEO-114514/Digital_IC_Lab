@@ -1,0 +1,799 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Sep 27 17:55:05 2024
+# Process ID: 21056
+# Current directory: D:/Digital_IC/Digital_IC_Lab/Lab1_LED/Lab1_LED.runs/synth_1
+# Command line: vivado.exe -log ARMSOC_TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ARMSOC_TOP.tcl
+# Log file: D:/Digital_IC/Digital_IC_Lab/Lab1_LED/Lab1_LED.runs/synth_1/ARMSOC_TOP.vds
+# Journal file: D:/Digital_IC/Digital_IC_Lab/Lab1_LED/Lab1_LED.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ARMSOC_TOP.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 353.828 ; gain = 53.934
+Command: synth_design -top ARMSOC_TOP -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 14020 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 850.750 ; gain = 218.754
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ARMSOC_TOP' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP.v:37]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [E:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (1#1) [E:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6157] synthesizing module 'CORTEXM3INTEGRATIONDS' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/CORTEXM3INTEGRATIONDS.v:24]
+INFO: [Synth 8-6157] synthesizing module 'cortexm3ds_logic' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'cortexm3ds_logic' (2#1) [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'CORTEXM3INTEGRATIONDS' (3#1) [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/CORTEXM3INTEGRATIONDS.v:24]
+INFO: [Synth 8-6157] synthesizing module 'AHB2MEM' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2BRAM.v:11]
+	Parameter MEMWIDTH bound to: 15 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'D:/Digital_IC/Digital_IC_Lab/Lab1_LED/Software/code.hex' is read successfully [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2BRAM.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'AHB2MEM' (4#1) [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2BRAM.v:11]
+INFO: [Synth 8-6157] synthesizing module 'AHBDCD' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBDCD.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'AHBDCD' (5#1) [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBDCD.v:38]
+INFO: [Synth 8-6157] synthesizing module 'AHBMUX' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBMUX.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'AHBMUX' (6#1) [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBMUX.v:38]
+INFO: [Synth 8-6157] synthesizing module 'AHB2LED' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v:1]
+WARNING: [Synth 8-6014] Unused sequential element rHSIZE_reg was removed.  [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'AHB2LED' (7#1) [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v:1]
+INFO: [Synth 8-6157] synthesizing module 'AHB2KEY' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v:1]
+WARNING: [Synth 8-6014] Unused sequential element rHSEL_reg was removed.  [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v:38]
+WARNING: [Synth 8-6014] Unused sequential element rHTRANS_reg was removed.  [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v:40]
+WARNING: [Synth 8-6014] Unused sequential element rHWRITE_reg was removed.  [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v:41]
+WARNING: [Synth 8-6014] Unused sequential element rHSIZE_reg was removed.  [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'AHB2KEY' (8#1) [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ARMSOC_TOP' (9#1) [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP.v:37]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HSEL
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HTRANS[1]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HTRANS[0]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWRITE
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HSIZE[2]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HSIZE[1]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HSIZE[0]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[31]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[30]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[29]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[28]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[27]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[26]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[25]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[24]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[23]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[22]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[21]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[20]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[19]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[18]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[17]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[16]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[15]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[14]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[13]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[12]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[11]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[10]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[9]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[8]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[7]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[6]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[5]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[4]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[3]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[2]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[1]
+WARNING: [Synth 8-3331] design AHB2KEY has unconnected port HWDATA[0]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HSIZE[2]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HSIZE[1]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HSIZE[0]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[31]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[30]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[29]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[28]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[27]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[26]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[25]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[24]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[23]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[22]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[21]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[20]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[19]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[18]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[17]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[16]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[15]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[14]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[13]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[12]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[11]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[10]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[9]
+WARNING: [Synth 8-3331] design AHB2LED has unconnected port HWDATA[8]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[23]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[22]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[21]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[20]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[19]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[18]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[17]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[16]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[15]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[14]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[13]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[12]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[11]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[10]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[9]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[8]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[7]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[6]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[5]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[4]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[3]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[2]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[1]
+WARNING: [Synth 8-3331] design AHBDCD has unconnected port HADDR[0]
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port RETAINn
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port CGBYPASS
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port INTISR[239]
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port INTISR[238]
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port INTISR[237]
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port INTISR[236]
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port INTISR[235]
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port INTISR[234]
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port INTISR[233]
+WARNING: [Synth 8-3331] design cortexm3ds_logic has unconnected port INTISR[232]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:49 ; elapsed = 00:01:01 . Memory (MB): peak = 1976.582 ; gain = 1344.586
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:59 ; elapsed = 00:01:12 . Memory (MB): peak = 1976.582 ; gain = 1344.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:59 ; elapsed = 00:01:12 . Memory (MB): peak = 1976.582 ; gain = 1344.586
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC.xdc]
+Finished Parsing XDC File [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ARMSOC_TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ARMSOC_TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1976.582 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.422 . Memory (MB): peak = 1976.582 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:16 ; elapsed = 00:01:37 . Memory (MB): peak = 1976.582 ; gain = 1344.586
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 2 processes.
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:16 ; elapsed = 00:01:38 . Memory (MB): peak = 1976.582 ; gain = 1344.586
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:16 ; elapsed = 00:01:38 . Memory (MB): peak = 1976.582 ; gain = 1344.586
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'Et2nz6_reg' into 'Er2nz6_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:7214]
+INFO: [Synth 8-4471] merging register 'Hs2nz6_reg' into 'Su2nz6_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:7213]
+INFO: [Synth 8-4471] merging register 'Ms3nz6_reg' into 'Ul3nz6_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:7232]
+INFO: [Synth 8-4471] merging register 'Ki0oz6_reg' into 'Ek0oz6_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:7733]
+INFO: [Synth 8-4471] merging register 'Ldbu07_reg' into 'Zabu07_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:11151]
+INFO: [Synth 8-4471] merging register 'Rhbu07_reg' into 'Dkbu07_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:11153]
+INFO: [Synth 8-4471] merging register 'Vqbu07_reg' into 'Jobu07_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:11157]
+INFO: [Synth 8-4471] merging register 'Nxbu07_reg' into 'Bvbu07_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:11160]
+INFO: [Synth 8-4471] merging register 'F4cu07_reg' into 'T1cu07_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:11163]
+INFO: [Synth 8-4471] merging register 'Xacu07_reg' into 'L8cu07_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:11166]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v:13205]
+INFO: [Synth 8-5546] ROM "dec" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MUX_SEL" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-6430] The Block RAM "AHB2MEM:/memory_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+WARNING: [Synth 8-6841] Block RAM (memory_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (13) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute "ram_decomp = power" if BWWE is desired.)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:47 ; elapsed = 00:03:12 . Memory (MB): peak = 1976.582 ; gain = 1344.586
+---------------------------------------------------------------------------------
+RAM Pipeline Warning: Read Address Register Found For RAM memory_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM memory_reg. We will not be able to pipeline it. This may degrade performance. 
+
+Report RTL Partitions: 
++------+----------------------+------------+----------+
+|      |RTL Partition         |Replication |Instances |
++------+----------------------+------------+----------+
+|1     |cortexm3ds_logic__GB0 |           1|     49562|
+|2     |cortexm3ds_logic__GB1 |           1|     27484|
+|3     |ARMSOC_TOP__GC0       |           1|      1330|
++------+----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 11    
+	   2 Input     33 Bit       Adders := 6     
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
+	   3 Input     31 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
+	   3 Input      7 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1256  
+	   3 Input      1 Bit         XORs := 2     
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               13 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 5660  
++---RAMs : 
+	             256K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 13    
+	  11 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2135  
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ARMSOC_TOP 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module cortexm3ds_logic 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     34 Bit       Adders := 11    
+	   2 Input     33 Bit       Adders := 6     
+	   2 Input     32 Bit       Adders := 3     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input     31 Bit       Adders := 1     
+	   3 Input     31 Bit       Adders := 1     
+	   2 Input     24 Bit       Adders := 1     
+	   2 Input     21 Bit       Adders := 1     
+	   2 Input     18 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     13 Bit       Adders := 1     
+	   2 Input     12 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 3     
+	   3 Input      7 Bit       Adders := 1     
+	   3 Input      6 Bit       Adders := 1     
+	   3 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1256  
+	   3 Input      1 Bit         XORs := 2     
+	   4 Input      1 Bit         XORs := 1     
++---Registers : 
+	                1 Bit    Registers := 5652  
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2130  
+Module AHB2MEM__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	             256K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 1     
+Module AHBDCD 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input     16 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	  11 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+Module AHBMUX 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module AHB2MEM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	             256K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input      8 Bit        Muxes := 1     
+Module AHB2LED 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module AHB2KEY 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP Glym17, operation Mode is: A*B.
+DSP Report: operator Glym17 is absorbed into DSP Glym17.
+DSP Report: operator Glym17 is absorbed into DSP Glym17.
+DSP Report: Generating DSP Glym17, operation Mode is: A*B.
+DSP Report: operator Glym17 is absorbed into DSP Glym17.
+DSP Report: operator Glym17 is absorbed into DSP Glym17.
+DSP Report: Generating DSP Glym17, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Glym17 is absorbed into DSP Glym17.
+DSP Report: operator Glym17 is absorbed into DSP Glym17.
+INFO: [Synth 8-4471] merging register 'uAHB2LED/rHADDR_reg[31:0]' into 'uAHB2RAM/APhase_HWADDR_reg[31:0]' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v:39]
+INFO: [Synth 8-4471] merging register 'uAHB2LED/rHWRITE_reg' into 'uAHB2RAM/APhase_HWRITE_reg' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v:41]
+INFO: [Synth 8-4471] merging register 'uAHB2LED/rHTRANS_reg[1:0]' into 'uAHB2RAM/APhase_HTRANS_reg[1:0]' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v:40]
+INFO: [Synth 8-4471] merging register 'uAHB2KEY/rHADDR_reg[31:0]' into 'uAHB2RAM/APhase_HWADDR_reg[31:0]' [D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v:39]
+INFO: [Synth 8-5546] ROM "uAHBDCD/dec" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "uAHBDCD/MUX_SEL" is below threshold of ROM address width. It will be mapped to LUTs
+RAM Pipeline Warning: Read Address Register Found For RAM uAHB2ROM/memory_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM uAHB2ROM/memory_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6430] The Block RAM "ARMSOC_TOP/uAHB2ROM/memory_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+WARNING: [Synth 8-6841] Block RAM (uAHB2ROM/memory_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (13) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute "ram_decomp = power" if BWWE is desired.)
+RAM Pipeline Warning: Read Address Register Found For RAM uAHB2RAM/memory_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM uAHB2RAM/memory_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6430] The Block RAM "ARMSOC_TOP/uAHB2RAM/memory_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+WARNING: [Synth 8-6841] Block RAM (uAHB2RAM/memory_reg) originally specified as a Byte Wide Write Enable RAM cannot take advantage of ByteWide feature and is implemented with single write enable per RAM due to following reason.
+(address width (13) is more than optimal threshold of 12. Implementing using BWWE will require more logic and timing would be suboptimal. Please use attribute "ram_decomp = power" if BWWE is desired.)
+RAM Pipeline Warning: Read Address Register Found For RAM uAHB2ROM/memory_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM uAHB2RAM/memory_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_2/Ab3nz6_reg)
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Fwpoz6_reg' (FDC) to 'u_cortexm3ds_logici_1/Ntpoz6_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Yfrs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Ears07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Aers07_reg' (FDE) to 'u_cortexm3ds_logici_1/Ears07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Ears07_reg' (FDE) to 'u_cortexm3ds_logici_1/L2rs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Whrs07_reg' (FDE) to 'u_cortexm3ds_logici_1/L2rs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Nuqh07_reg' (FDE) to 'u_cortexm3ds_logici_1/L2rs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/G8rs07_reg' (FDE) to 'u_cortexm3ds_logici_1/L2rs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Ccrs07_reg' (FDE) to 'u_cortexm3ds_logici_1/L2rs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Pn2nz6_reg' (FDC) to 'u_cortexm3ds_logici_1/Er2nz6_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/L2rs07_reg' (FDE) to 'u_cortexm3ds_logici_1/I6rs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Owqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/I6rs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/I6rs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Puqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/K4rs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Puqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Puqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/M0rs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Soqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Qsqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Rqqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Wgqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Tmqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/B7qs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Xeqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Ycqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/D3qs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Zaqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Wprh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/E1qs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Fzps07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Ylrh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Gxps07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Bgrh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Zjrh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Airh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/F8rh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Cerh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/J0rh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/I2rh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/H4rh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Lwqh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/G6rh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Kyqh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Dcrh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Earh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Vrrh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Xnrh07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/A9qs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/C5qs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Ukqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Viqs07_reg' (FDE) to 'u_cortexm3ds_logici_1/Nyqs07_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Nyqs07_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Yg3nz6_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Q83t07_reg)
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Go2nz6_reg' (FDC) to 'u_cortexm3ds_logici_1/Su2nz6_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/P0wa17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Gdwa17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Rnva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Tava17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Poua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/N1va17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Rbua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Tyva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Lbwa17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Vlva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/X8va17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Tmua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Rzua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/V9ua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Bvva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/V7wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/V7wa17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Diva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Bjua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Zvua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/D6ua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/K2wa17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Bfwa17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Npva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Pcva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Lqua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/J3va17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Ndua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/F4wa17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Q0ua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Jrva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Leva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Hsua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/F5va17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Jfua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/L2ua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Ftva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/A6wa17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/A6wa17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Zjva17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Hgva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Zjva17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Fhua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Zjva17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Duua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Zjva17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/H4ua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Zjva17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Un3nz6_reg' (FDC) to 'u_cortexm3ds_logici_1/Er2nz6_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Xwva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Zjva17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Q9wa17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Zjva17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Zjva17_reg' (FDCE) to 'u_cortexm3ds_logici_1/B7va17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/B7va17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Z7ua17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Xkua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Z7ua17_reg'
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Vxua17_reg' (FDCE) to 'u_cortexm3ds_logici_1/Z7ua17_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Z7ua17_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Pa3t07_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Pc3t07_reg)
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Er2nz6_reg' (FDC) to 'u_cortexm3ds_logici_1/Ul3nz6_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Cnmnz6_reg)
+INFO: [Synth 8-3886] merging instance 'u_cortexm3ds_logici_1/Ip3nz6_reg' (FDC) to 'u_cortexm3ds_logici_1/Su2nz6_reg'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Qmmzz6_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Zpmnz6_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Cngzz6_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/S84g07_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Etbnz6_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_1/Sgonz6_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_2/Xyyf07_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_2/E5zf07_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_cortexm3ds_logici_2/I8zf07_reg)
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:06:36 ; elapsed = 00:07:12 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|AHB2MEM:    | memory_reg | 8 K x 32(READ_FIRST)   | W |   | 8 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|AHB2MEM:    | memory_reg | 8 K x 32(READ_FIRST)   | W |   | 8 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|cortexm3ds_logic | A*B            | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cortexm3ds_logic | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|cortexm3ds_logic | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 15     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-----------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/i_1/uAHB2ROM/memory_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_1/uAHB2ROM/memory_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_1/uAHB2ROM/memory_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_1/uAHB2ROM/memory_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_1/uAHB2ROM/memory_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_1/uAHB2ROM/memory_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_1/uAHB2ROM/memory_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_1/uAHB2ROM/memory_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_4/uAHB2RAM/memory_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_4/uAHB2RAM/memory_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_4/uAHB2RAM/memory_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_4/uAHB2RAM/memory_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_4/uAHB2RAM/memory_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_4/uAHB2RAM/memory_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_4/uAHB2RAM/memory_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/i_4/uAHB2RAM/memory_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++------+----------------------+------------+----------+
+|      |RTL Partition         |Replication |Instances |
++------+----------------------+------------+----------+
+|1     |cortexm3ds_logic__GB0 |           1|     34683|
+|2     |cortexm3ds_logic__GB1 |           1|     21846|
+|3     |ARMSOC_TOP__GC0       |           1|       728|
++------+----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:06:45 ; elapsed = 00:07:22 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:07:47 ; elapsed = 00:08:25 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|AHB2MEM:    | memory_reg | 8 K x 32(READ_FIRST)   | W |   | 8 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
+|AHB2MEM:    | memory_reg | 8 K x 32(READ_FIRST)   | W |   | 8 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 8      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+----------------------+------------+----------+
+|      |RTL Partition         |Replication |Instances |
++------+----------------------+------------+----------+
+|1     |cortexm3ds_logic__GB0 |           1|     34472|
+|2     |cortexm3ds_logic__GB1 |           1|     21846|
+|3     |ARMSOC_TOP__GC0       |           1|       728|
++------+----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance uAHB2ROM/memory_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2ROM/memory_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2ROM/memory_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2ROM/memory_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2ROM/memory_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2ROM/memory_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2ROM/memory_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2ROM/memory_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2RAM/memory_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2RAM/memory_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2RAM/memory_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2RAM/memory_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2RAM/memory_reg_2_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2RAM/memory_reg_2_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2RAM/memory_reg_3_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance uAHB2RAM/memory_reg_3_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:07:59 ; elapsed = 00:08:37 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop reg_sys_rst_n_reg is being inverted and renamed to reg_sys_rst_n_reg_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:08:01 ; elapsed = 00:08:40 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:08:01 ; elapsed = 00:08:40 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:08:02 ; elapsed = 00:08:42 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:08:02 ; elapsed = 00:08:42 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:08:03 ; elapsed = 00:08:43 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:08:03 ; elapsed = 00:08:43 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     3|
+|2     |CARRY4     |   290|
+|3     |DSP48E1    |     3|
+|4     |LUT1       |   203|
+|5     |LUT2       |  1103|
+|6     |LUT3       |  1270|
+|7     |LUT4       |  2396|
+|8     |LUT5       |  3202|
+|9     |LUT6       |  8226|
+|10    |MUXF7      |    21|
+|11    |MUXF8      |     1|
+|12    |RAMB36E1   |     2|
+|13    |RAMB36E1_1 |     2|
+|14    |RAMB36E1_2 |     2|
+|15    |RAMB36E1_3 |     2|
+|16    |RAMB36E1_4 |     2|
+|17    |RAMB36E1_5 |     2|
+|18    |RAMB36E1_6 |     2|
+|19    |RAMB36E1_7 |     2|
+|20    |FDCE       |  2989|
+|21    |FDPE       |    81|
+|22    |FDRE       |  2183|
+|23    |IBUF       |    12|
+|24    |IOBUF      |     1|
+|25    |OBUF       |     8|
+|26    |OBUFT      |     1|
++------+-----------+------+
+
+Report Instance Areas: 
++------+------------------------+----------------------+------+
+|      |Instance                |Module                |Cells |
++------+------------------------+----------------------+------+
+|1     |top                     |                      | 22009|
+|2     |  uAHB2KEY              |AHB2KEY               |     8|
+|3     |  uAHB2LED              |AHB2LED               |    27|
+|4     |  uAHB2RAM              |AHB2MEM               |    34|
+|5     |  uAHB2ROM              |AHB2MEM_0             |    32|
+|6     |  uAHBMUX               |AHBMUX                |    48|
+|7     |  u_CORTEXM3INTEGRATION |CORTEXM3INTEGRATIONDS | 21831|
+|8     |    u_cortexm3ds_logic  |cortexm3ds_logic      | 21831|
++------+------------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:08:03 ; elapsed = 00:08:43 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:06:55 ; elapsed = 00:08:38 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+Synthesis Optimization Complete : Time (s): cpu = 00:08:04 ; elapsed = 00:08:53 . Memory (MB): peak = 2102.574 ; gain = 1470.578
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 332 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'ARMSOC_TOP' is not ideal for floorplanning, since the cellview 'cortexm3ds_logic' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2102.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+206 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:08:12 ; elapsed = 00:09:06 . Memory (MB): peak = 2102.574 ; gain = 1748.746
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2102.574 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Digital_IC/Digital_IC_Lab/Lab1_LED/Lab1_LED.runs/synth_1/ARMSOC_TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ARMSOC_TOP_utilization_synth.rpt -pb ARMSOC_TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Sep 27 18:04:38 2024...

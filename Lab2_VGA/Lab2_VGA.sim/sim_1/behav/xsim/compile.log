@@ -1,0 +1,37 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/Lab2_VGA.srcs/sources_1/ip/clk_25M/clk_25M_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25M_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/Lab2_VGA.srcs/sources_1/ip/clk_25M/clk_25M.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_25M
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/Lab2_VGA.srcs/sources_1/ip/clk_50M/clk_50M_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_50M_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/Lab2_VGA.srcs/sources_1/ip/clk_50M/clk_50M.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_50M
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_BRAM/AHB2BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHB2MEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_BUS/AHBDCD.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBDCD
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_BUS/AHBMUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBMUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/AHBVGASYS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AHBVGA
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/ARMSOC_TOP.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ARMSOC_TOP
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/CortexM3-DS/CORTEXM3INTEGRATIONDS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CORTEXM3INTEGRATIONDS
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module GenericCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/dual_port_ram_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dual_port_ram_sync
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/font_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module font_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/vga_console.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_console
+INFO: [VRFC 10-2458] undeclared symbol we, assumed default net type wire [D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/vga_console.v:137]
+INFO: [VRFC 10-2458] undeclared symbol back_space, assumed default net type wire [D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/vga_console.v:184]
+INFO: [VRFC 10-2458] undeclared symbol cursor_on, assumed default net type wire [D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/vga_console.v:231]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/vga_image.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_image
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/AHB_VGA/vga_sync.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module VGAInterface
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Digital_IC/Digital_IC_Lab/Lab2_VGA/FPGA/ARMSOC_TOP_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ARMSOC_TOP_TB

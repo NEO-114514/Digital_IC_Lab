@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../FPGA/AHB2BRAM.v" \
+"../../../../FPGA/AHB2KEY.v" \
+"../../../../FPGA/AHB2LED.v" \
+"../../../../FPGA/AHBDCD.v" \
+"../../../../FPGA/AHBMUX.v" \
+"../../../../FPGA/ARMSOC_TOP.v" \
+"../../../../FPGA/CORTEXM3INTEGRATIONDS.v" \
+"../../../../FPGA/cortexm3ds_logic.v" \
+"../../../../FPGA/ARMSOC_TOP_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

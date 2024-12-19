@@ -1,4 +1,1 @@
-.\main.o: main.c
-.\main.o: ..\Software\vga_api.h
-.\main.o: ..\Software\uart.h
-.\main.o: ..\Software\picture.h
+.\main.o: USER\main.c

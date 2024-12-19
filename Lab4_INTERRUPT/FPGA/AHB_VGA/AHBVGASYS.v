@@ -215,7 +215,7 @@ module AHBVGA(
   begin
     if(!HRESETn)
     begin
-        r_text_color <= 8'b0000_0000;
+        r_text_color <= 8'b1111_1111;
         r_text_back_color <= 8'b0000_0000;
     end
     else if (last_HWRITE & last_HSEL & last_HTRANS[1] & HREADYOUT & sel_text_color )

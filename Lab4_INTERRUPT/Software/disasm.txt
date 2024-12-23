@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 15
 
-    Program header offset: 14548 (0x000038d4)
-    Section header offset: 14580 (0x000038f4)
+    Program header offset: 14568 (0x000038e8)
+    Section header offset: 14600 (0x00003908)
 
     Section header string table index: 14
 
@@ -501,7 +501,7 @@
     Flags       : None (0x00000000)
     Addr        : 0x00000000
     File Offset : 2884 (0xb44)
-    Size        : 1052 bytes (0x41c)
+    Size        : 1064 bytes (0x428)
     Link        : SHN_UNDEF
     Info        : 0
     Alignment   : 1
@@ -516,8 +516,8 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 3936 (0xf60)
-    Size        : 348 bytes (0x15c)
+    File Offset : 3948 (0xf6c)
+    Size        : 356 bytes (0x164)
     Link        : SHN_UNDEF
     Info        : 0
     Alignment   : 1
@@ -532,7 +532,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 4284 (0x10bc)
+    File Offset : 4304 (0x10d0)
     Size        : 80 bytes (0x50)
     Link        : SHN_UNDEF
     Info        : 0
@@ -548,7 +548,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 4364 (0x110c)
+    File Offset : 4384 (0x1120)
     Size        : 90 bytes (0x5a)
     Link        : SHN_UNDEF
     Info        : 0
@@ -564,7 +564,7 @@
     Type        : SHT_SYMTAB (0x00000002)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 4456 (0x1168)
+    File Offset : 4476 (0x117c)
     Size        : 3408 bytes (0xd50)
     Link        : Section 11 (.strtab)
     Info        : Last local symbol no = 137
@@ -580,7 +580,7 @@
     Type        : SHT_STRTAB (0x00000003)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 7864 (0x1eb8)
+    File Offset : 7884 (0x1ecc)
     Size        : 3608 bytes (0xe18)
     Link        : SHN_UNDEF
     Info        : 0
@@ -596,7 +596,7 @@
     Type        : SHT_NOTE (0x00000007)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 11472 (0x2cd0)
+    File Offset : 11492 (0x2ce4)
     Size        : 28 bytes (0x1c)
     Link        : SHN_UNDEF
     Info        : 0
@@ -618,7 +618,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 11500 (0x2cec)
+    File Offset : 11520 (0x2d00)
     Size        : 2908 bytes (0xb5c)
     Link        : SHN_UNDEF
     Info        : 0
@@ -679,7 +679,7 @@
     Type        : SHT_STRTAB (0x00000003)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 14408 (0x3848)
+    File Offset : 14428 (0x385c)
     Size        : 140 bytes (0x8c)
     Link        : SHN_UNDEF
     Info        : 0

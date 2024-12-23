@@ -1,7 +1,7 @@
 //#include <vga_api.h>
 //#include <uart.h>
 //#include <picture.h>
-//#include <interrupt.h>
+#include <interrupt.h>
 //#include <timer.h>
 
 //void UART_ISR()
@@ -65,32 +65,13 @@
 // 3)A counter is incremented from 1 to 10, and displayed on the VGA monitor
 //------------------------------------------------------------------------------------------------------
 
-#define AHB_VGA_BASE				0x50000000
-#define AHB_UART_BASE				0x51000000
-#define AHB_TIMER_BASE			0x52000000
+
 #define AHB_GPIO_BASE				0x53000000
 #define NVIC_INT_ENABLE			0xE000E100
 #define NVIC_INT_PRIORITY0	0xE000E400
+#define AHB_TIMER_BASE			0x52000000
 
-volatile static int counter=0x31;
 
-void UART_ISR()
-{
-	char c;
-	c=*(unsigned char*) AHB_UART_BASE;		//read a character from UART
-	*(unsigned char*) AHB_UART_BASE = c;	//write the character to UART
-}
-
-void Timer_ISR()
-{
-	*(unsigned int*) AHB_VGA_BASE = counter;		//print the counter value to VGA
-	*(unsigned int*) AHB_VGA_BASE = ' ';				//print space
-
-	counter++;
-	if (counter==0x3A)
-		*(unsigned int*) (AHB_TIMER_BASE+8) = 0;	//Stop timer if counter reaches 9
-	*(unsigned int*) (AHB_TIMER_BASE+0x0C) = 1;	//Clear timer interrupt request
-	}
 
 //////////////////////////////////////////////////////////////////
 // Main Function

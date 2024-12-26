@@ -1,0 +1,10 @@
+1 out of 1 target(s) converted
+Created solution: D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Software/Code.csolution.yml
+With projects:
+- D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Software/Code.cproject.yml
+Error: 0 error(s), 1 warning(s):
+Warnings:
+	The target "DesignStart" is configured with following user commands which should be run manually:
+            After Build/Rebuild
+                fromelf -cvf code.axf --vhx --32x1 -o code.hex
+                fromelf -cvf code.axf -o disasm.txt

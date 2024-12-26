@@ -1,0 +1,50 @@
+project:
+  packs:
+    - pack: ARM::CMSIS@5.9.0
+  setups:
+    - setup: Options for DesignStart
+      processor:
+        endian: little
+      add-path:
+        - USER
+      debug: "on"
+      misc:
+        - C:
+            - -std=c99
+          C-CPP:
+            - -fno-rtti
+            - -funsigned-char
+            - -fshort-enums
+            - -fshort-wchar
+            - -ffunction-sections
+            - -Wno-packed
+            - -Wno-missing-variable-declarations
+            - -Wno-missing-prototypes
+            - -Wno-missing-noreturn
+            - -Wno-sign-conversion
+            - -Wno-nonportable-include-path
+            - -Wno-reserved-id-macro
+            - -Wno-unused-macros
+            - -Wno-documentation-unknown-command
+            - -Wno-documentation
+            - -Wno-license-management
+            - -Wno-parentheses-equality
+          CPP:
+            - -xc++
+            - -std=c++11
+          ASM:
+            - -masm=auto
+          Link:
+            - --strict
+            - --summary_stderr
+            - --info summarysizes
+  groups:
+    - group: Source Files
+      files:
+        - file: cmdsasm.s
+        - file: USER/main.c
+        - file: USER/pic.c
+        - file: USER/uart.c
+        - file: USER/vga_api.c
+        - file: USER/interrupt.c
+        - file: USER/timer.c

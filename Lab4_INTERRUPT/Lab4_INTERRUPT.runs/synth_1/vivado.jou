@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Dec 19 15:03:20 2024
-# Process ID: 23644
+# Start of session at: Wed Dec 25 16:19:48 2024
+# Process ID: 64944
 # Current directory: D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Lab4_INTERRUPT.runs/synth_1
 # Command line: vivado.exe -log ARMSOC_TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ARMSOC_TOP.tcl
 # Log file: D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Lab4_INTERRUPT.runs/synth_1/ARMSOC_TOP.vds

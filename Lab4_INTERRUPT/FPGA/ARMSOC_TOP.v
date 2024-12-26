@@ -98,11 +98,16 @@ module ARMSOC_TOP (
     wire          sleeping;
     wire  [239:0] irq;
 
+    wire          timer_irq;
+    wire          uart_irq;
+    wire          gpio_irq;
+
     // Interrupt signals
-    assign        irq[239:2] = 238'b0;
+    assign        irq[239:3] = 238'b0;
 
     assign irq[0] = timer_irq;
     assign irq[1] = uart_irq;
+    assign irq[2] = gpio_irq;
     
 	// Clock divider, divide the frequency by two, hence less time constraint 
     //双时钟
@@ -551,7 +556,8 @@ module ARMSOC_TOP (
         .GPIOIN({8'b00000000, SW[7:0]}),
         .HREADYOUT(hready_gpio),
         .HRDATA(hrdata_gpio),
-        .GPIOOUT(LED[7:0])
+        .GPIOOUT(LED[7:0]),
+        .gpio_irq(gpio_irq)
     );
 
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Thu Dec 19 15:07:18 2024
+| Date         : Wed Dec 25 16:23:24 2024
 | Host         : HUNTER running 64-bit major release  (build 9200)
 | Command      : report_methodology -file ARMSOC_TOP_methodology_drc_routed.rpt -pb ARMSOC_TOP_methodology_drc_routed.pb -rpx ARMSOC_TOP_methodology_drc_routed.rpx
 | Design       : ARMSOC_TOP
@@ -132,7 +132,7 @@ Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell uAHBUART/uUART_TX/FSM_sequential_current_state[0]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) uAHBMUX/APHASE_MUX_SEL_reg[0]/CLR, uAHBMUX/APHASE_MUX_SEL_reg[1]/CLR, uAHBMUX/APHASE_MUX_SEL_reg[2]/CLR, uAHBMUX/APHASE_MUX_SEL_reg[3]/CLR, uAHB2RAM/APhase_HSEL_reg/CLR, uAHB2RAM/APhase_HSIZE_reg[0]/CLR, uAHB2RAM/APhase_HSIZE_reg[1]/CLR, uAHB2RAM/APhase_HTRANS_reg[1]/CLR, uAHB2RAM/APhase_HWADDR_reg[0]/CLR, uAHB2RAM/APhase_HWADDR_reg[10]/CLR, uAHB2RAM/APhase_HWADDR_reg[11]/CLR, uAHB2RAM/APhase_HWADDR_reg[12]/CLR, uAHB2RAM/APhase_HWADDR_reg[13]/CLR, uAHB2RAM/APhase_HWADDR_reg[14]/CLR, uAHB2RAM/APhase_HWADDR_reg[1]/CLR (the first 15 of 338 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell uAHBUART/uUART_TX/FSM_sequential_current_state[0]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) uAHBMUX/APHASE_MUX_SEL_reg[0]/CLR, uAHBMUX/APHASE_MUX_SEL_reg[1]/CLR, uAHBMUX/APHASE_MUX_SEL_reg[2]/CLR, uAHBMUX/APHASE_MUX_SEL_reg[3]/CLR, uAHB2RAM/APhase_HSEL_reg/CLR, uAHB2RAM/APhase_HSIZE_reg[0]/CLR, uAHB2RAM/APhase_HSIZE_reg[1]/CLR, uAHB2RAM/APhase_HTRANS_reg[1]/CLR, uAHB2RAM/APhase_HWADDR_reg[0]/CLR, uAHB2RAM/APhase_HWADDR_reg[10]/CLR, uAHB2RAM/APhase_HWADDR_reg[11]/CLR, uAHB2RAM/APhase_HWADDR_reg[12]/CLR, uAHB2RAM/APhase_HWADDR_reg[13]/CLR, uAHB2RAM/APhase_HWADDR_reg[14]/CLR, uAHB2RAM/APhase_HWADDR_reg[1]/CLR (the first 15 of 347 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning

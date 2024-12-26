@@ -1,1 +1,1 @@
-.\pic.o: USER\pic.c
+./pic.o: USER\pic.c

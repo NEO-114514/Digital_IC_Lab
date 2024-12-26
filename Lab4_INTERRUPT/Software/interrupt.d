@@ -1,2 +1,1 @@
-.\interrupt.o: USER\interrupt.c
-.\interrupt.o: .\USER\interrupt.h
+./interrupt.o: USER\interrupt.c USER\interrupt.h

@@ -1,2 +1,1 @@
-.\timer.o: USER\timer.c
-.\timer.o: USER\timer.h
+./timer.o: USER\timer.c USER\timer.h

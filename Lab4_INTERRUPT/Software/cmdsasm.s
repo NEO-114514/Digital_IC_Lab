@@ -42,7 +42,7 @@ __Vectors		    	DCD		0x00003FFC
 						        				
         				DCD		Timer_Handler
         				DCD		UART_Handler
-        				DCD		0
+        				DCD		GPIO_Handler
         				DCD		0
         				DCD		0
         				DCD		0
@@ -75,12 +75,22 @@ Timer_Handler   PROC
                 POP     {R0,R1,R2,PC}                    ;return
                 ENDP
 
+
+
 UART_Handler    PROC
                 EXPORT UART_Handler
 				IMPORT UART_ISR
                 PUSH    {R0,R1,R2,LR}
 				BL UART_ISR
                 POP     {R0,R1,R2,PC}
+                ENDP
+					
+GPIO_Handler    PROC
+                EXPORT GPIO_Handler
+				IMPORT GPIO_ISR
+                PUSH    {R0,R1,R2,LR}
+				BL GPIO_ISR
+                POP     {R0,R1,R2,PC}                    ;return
                 ENDP
 
 				ALIGN 		4					 ; Align to a word boundary

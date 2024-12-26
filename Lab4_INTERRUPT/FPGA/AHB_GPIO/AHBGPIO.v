@@ -50,8 +50,9 @@ module AHBGPIO(
 	//Output
   output wire HREADYOUT,
   output wire [31:0] HRDATA,
-  output wire [15:0] GPIOOUT
+  output wire [15:0] GPIOOUT,
   
+  output reg  gpio_irq
   
   );
   
@@ -61,7 +62,7 @@ module AHBGPIO(
   reg [15:0] gpio_dataout;
   reg [15:0] gpio_datain;
   reg [15:0] gpio_dir;
-  reg [15:0] gpio_data_next;
+  reg [15:0] gpio_data_prev;
   reg [31:0] last_HADDR;
   reg [1:0] last_HTRANS;
   reg last_HWRITE;
@@ -120,5 +121,28 @@ module AHBGPIO(
          
   assign HRDATA[15:0] = gpio_datain;  
   assign GPIOOUT = gpio_dataout;
+
+
+  // Detect input signal change and trigger interrupt
+  always @(posedge HCLK or negedge HRESETn)
+  begin
+    if (!HRESETn)
+    begin
+      gpio_data_prev <= 16'h0000;
+      gpio_irq <= 1'b0;
+    end
+    else
+    begin
+      if (GPIOIN != gpio_data_prev)  // Check if input changed
+      begin
+        gpio_irq <= 1'b1;  // Trigger interrupt
+      end
+      else
+      begin
+        gpio_irq <= 1'b0;  // No change, reset interrupt
+      end
+      gpio_data_prev <= GPIOIN;  // Store current input value for the next cycle
+    end
+  end
 
 endmodule

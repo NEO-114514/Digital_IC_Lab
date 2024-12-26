@@ -9,12 +9,12 @@ License Information: Tengxi Huang, HP, LIC=21E4T-R9EQ8-010P1-CN3IP-EFB8M-P7I9U
  
 Tool Versions:
 Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
-Toolchain Path:  E:\Keil_v5\ARM\ARMCC\Bin
-C Compiler:      Armcc.exe V5.06 update 7 (build 960)
-Assembler:       Armasm.exe V5.06 update 7 (build 960)
-Linker/Locator:  ArmLink.exe V5.06 update 7 (build 960)
-Library Manager: ArmAr.exe V5.06 update 7 (build 960)
-Hex Converter:   FromElf.exe V5.06 update 7 (build 960)
+Toolchain Path:  C:\Program Files\ArmCompilerforEmbedded6.19\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
 CPU DLL:         SARMCM3.DLL V5.36.0.0
 Dialog DLL:      DCM.DLL V1.17.3.0
 Target DLL:      CMSIS_AGDI.dll V1.33.0.0
@@ -22,11 +22,14 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 D:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\Software\Code.uvprojx
-Project File Date:  12/19/2024
+Project File Date:  12/25/2024
 
 <h2>Output:</h2>
-*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'E:\Keil_v5\ARM\ARMCC\Bin'
+*** Using Compiler 'V6.19', folder: 'C:\Program Files\ArmCompilerforEmbedded6.19\Bin'
 Build target 'DesignStart'
+compiling main.c...
+linking...
+Program Size: Code=728 RO-data=160 RW-data=4 ZI-data=2176  
 After Build - User command #1: fromelf -cvf code.axf --vhx --32x1 -o code.hex
 After Build - User command #2: fromelf -cvf code.axf -o disasm.txt
 ".\Code.axf" - 0 Error(s), 0 Warning(s).
@@ -42,7 +45,7 @@ Package Vendor: ARM
   E:\Keil_v5\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM3\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

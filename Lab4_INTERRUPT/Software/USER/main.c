@@ -1,63 +1,3 @@
-//#include <vga_api.h>
-//#include <uart.h>
-//#include <picture.h>
-#include <interrupt.h>
-//#include <timer.h>
-
-//void UART_ISR()
-//{
-//	//UART Interrupt
-//	 uart_echo();
-//	//always return input
-//	//UART Interrupt
-//}
-
-//volatile static char counter=0x31;
-//volatile static int x=0;
-
-//void Timer_ISR()
-//{
-//	//Timer Intertupt
-//	VGA_TEXT_REG = counter;
-//	VGA_TEXT_REG = ' ';
-//	counter++;
-//	if (counter==0x3A)
-//		TIMER_CONTROL_REG=0;
-//	
-//	
-//	//Timer Intertupt
-//	TIMER_CLEAR_REG=1;
-//}
-
-
-//int main()
-//{
-//	volatile int i;
-//	volatile int j;
-//	volatile int y=0;
-//	volatile int color;
-//	volatile char letter;
-//	volatile char last_letter;
-
-//	TIMER_LOAD_REG=25000000;
-//	TIMER_CONTROL_REG=0x03;
-//	
-////	Timer_SetLoad(25000000);
-////	Timer_Enable(1);
-////	Timer_SetMode(1);
-//	
-////	INTERRUPT_INIT(TIMER_IRQ, 0x00, 1);
-////	INTERRUPT_INIT(UART_IRQ, 0x40, 1);
-
-//	NVIC_INT_PRIORITY0 = 0x00004000;	
-//	NVIC_INT_ENABLE = 0x00000003;		
-//	
-//	while(1)
-//	{
-
-//	}
-//}
-
 //------------------------------------------------------------------------------------------------------
 // Program SoC using C
 // 1)Input from 8-bit switch and output to LEDs
@@ -65,34 +5,140 @@
 // 3)A counter is incremented from 1 to 10, and displayed on the VGA monitor
 //------------------------------------------------------------------------------------------------------
 
+#include "stdint.h"
 
-#define AHB_GPIO_BASE				0x53000000
-#define NVIC_INT_ENABLE			0xE000E100
-#define NVIC_INT_PRIORITY0	0xE000E400
-#define AHB_TIMER_BASE			0x52000000
+#define AHB_VGA_BASE        0x50000000
+#define AHB_UART_BASE       0x51000000
+#define AHB_TIMER_BASE      0x52000000
+#define AHB_GPIO_BASE       0x53000000
+#define NVIC_INT_ENABLE     0xE000E100
+#define NVIC_INT_PRIORITY0  0xE000E400
+
+#define UART_DATA_REG            *((volatile char*) AHB_UART_BASE)
+#define UART_STATUS_REG          *((volatile unsigned int*) (AHB_UART_BASE + 0x04))
+#define UART_CONTROL_REG         *((volatile unsigned int*) (AHB_UART_BASE + 0x08))
+#define TIMER_LOAD_REG           *((volatile unsigned int*) AHB_TIMER_BASE)
+#define TIMER_CONTROL_REG        *((volatile unsigned int*) (AHB_TIMER_BASE + 0x08))
+#define TIMER_INT_CLEAR_REG      *((volatile unsigned int*) (AHB_TIMER_BASE + 0x0C))
+#define VGA_DISPLAY_REG          *((volatile unsigned int*) AHB_VGA_BASE)
+#define GPIO_MODE_REG            *((volatile unsigned int*) (AHB_GPIO_BASE + 0x04))
+#define GPIO_DATA_REG            *((volatile unsigned int*) AHB_GPIO_BASE)
+#define NVIC_INT_ENABLE_REG      *((volatile unsigned int*) NVIC_INT_ENABLE)
+#define NVIC_INT_PRIORITY0_REG   *((volatile unsigned int*) NVIC_INT_PRIORITY0)
+	
+#define RX_FIFO_EMPTY      0x01  // Bit0: 接收FIFO是否为空
+#define TX_FIFO_FULL       0x02  // Bit1: 发送FIFO是否满
 
 
+void UART_ISR(void);
+void Timer_ISR(void);
 
 //////////////////////////////////////////////////////////////////
 // Main Function
 //////////////////////////////////////////////////////////////////
 
-int main(void) {
-	
-	int i;
-	*(unsigned int*) AHB_TIMER_BASE = 50000000;			  //Timer load register: =<clock frequency>
-	*(unsigned int*) (AHB_TIMER_BASE+8) = 0x03;				//Timer 4-bits control register: [0]: timer enable, [1] mode (free-run or reload) [2]: prescaler
+int main(void)
+{
+    static int i;
+    TIMER_LOAD_REG = 25000000;                // Timer load register: =<clock frequency>
+    TIMER_CONTROL_REG = 0x03;                 // Timer 4-bits control register: [0]: timer enable, [1] mode (free-run or reload) [2]: prescaler
 
-	*(unsigned int*) NVIC_INT_PRIORITY0 = 0x00004000;	//Priority: IRQ0(Timer): 0x00, IRQ1(UART): 0x40
-  *(unsigned int*) NVIC_INT_ENABLE = 0x00000003;		//Enable interrupts for UART and timer
-	
-	while(1){
-		*(unsigned int*) (AHB_GPIO_BASE+4) = 0x00;		//GPIO read mode
-		i=*(unsigned int*) AHB_GPIO_BASE;							//Read switch
-		*(unsigned int*) (AHB_GPIO_BASE+4) = 0x01;		//GPIO write mode
-		*(unsigned int*) AHB_GPIO_BASE = i;				//Write to the LEDs
-	}
+    NVIC_INT_PRIORITY0_REG = 0x00010200;      // Priority: IRQ0(Timer): 0x00, IRQ1(UART): 0x40
+    NVIC_INT_ENABLE_REG = 0x00000007;         // Enable interrupts for UART and timer
+
+    while (1) {
+
+    }
 }
 
 
 
+volatile static int counter = 0x31;
+
+void Timer_ISR()
+{
+	VGA_DISPLAY_REG = counter;                // Print the counter value to VGA
+	VGA_DISPLAY_REG = ' ';                    // Print space
+
+	counter++;
+	if (counter == 0x4A)
+			TIMER_CONTROL_REG = 0;                // Stop timer if counter reaches 9
+
+	TIMER_INT_CLEAR_REG = 1;                  // Clear timer interrupt request
+}
+
+volatile static int i;
+volatile static char output_char;
+volatile static int last_state = 0x00;
+volatile static int current_state;
+
+void GPIO_ISR()
+{
+    GPIO_MODE_REG = 0x00;                 // GPIO read mode
+    current_state = GPIO_DATA_REG;        // Read switch
+
+    for (int bit = 0; bit < 8; bit++) {   // Check each bit (switch)
+        if ((current_state & (1 << bit)) != (last_state & (1 << bit))) { // Detect state change
+            if (current_state & (1 << bit)) { // If switch is turned ON
+                output_char = '0' + bit;      // Determine switch number (0-based)
+            } else {                         // If switch is turned OFF
+                output_char = '0' + bit;      // Determine switch number (0-based)
+            }
+            UART_DATA_REG = output_char;      // Output character via UART
+            break;                            // Stop checking after the first detected change
+        }
+    }
+
+    last_state = current_state;           // Update last state
+
+    GPIO_MODE_REG = 0x01;                 // GPIO write mode
+    GPIO_DATA_REG = current_state;        // Write to the LEDs
+}
+
+volatile uint32_t last_received = 0;  // 保存上一个接收到的字符
+volatile uint32_t last_sent = 0;      // 保存上一个回送的字符
+
+void UART_ISR()
+{
+	// 1. 读取状态寄存器
+	uint32_t status = UART_STATUS_REG;
+	// 2. 检查接收FIFO是否为空
+	if (!(status & RX_FIFO_EMPTY)) {  // 接收FIFO不为空
+			// 3. 读取接收数据
+			uint32_t received_data = UART_DATA_REG;
+			// 4. 检查发送FIFO是否已满
+			while (status & TX_FIFO_FULL) {
+				status = UART_STATUS_REG;  // 等待直到发送FIFO有空闲
+		}
+			// 5. 处理数据
+			if (received_data == 0x0A || received_data == 0x0D) {
+				if (last_received == 0x0A && received_data == 0x0D) {
+						// 连续收到0x0A 0x0D, 不需要插入0x0D 0x0A
+						if (last_sent != 0x0A) {
+								UART_DATA_REG = 0x0D;  // 只回送0x0D
+								while (status & TX_FIFO_FULL) { status = UART_STATUS_REG; }
+						}
+						UART_DATA_REG = 0x0A;  // 然后回送0x0A
+				} else if (last_received == 0x0D && received_data == 0x0A) {
+						// 连续收到0x0D 0x0A, 不需要插入0x0D 0x0A
+						if (last_sent != 0x0A) {
+								UART_DATA_REG = 0x0D;  // 只回送0x0D
+								while (status & TX_FIFO_FULL) { status = UART_STATUS_REG; }
+						}
+						UART_DATA_REG = 0x0A;  // 然后回送0x0A
+				} else {
+						// 如果是单独的0x0A或0x0D, 插入0x0D 0x0A
+						if (last_sent != 0x0D) {
+								UART_DATA_REG = 0x0D;  // 回送0x0D
+								while (status & TX_FIFO_FULL) { status = UART_STATUS_REG; }
+						}
+						UART_DATA_REG = 0x0A;  // 然后回送0x0A
+				}
+			} else {  // 其他字符直接回送
+					UART_DATA_REG = received_data;
+			}
+			// 6. 更新全局变量
+			last_received = received_data;
+			last_sent = (received_data == 0x0A || received_data == 0x0D) ? 0x0A : received_data;
+	}
+}

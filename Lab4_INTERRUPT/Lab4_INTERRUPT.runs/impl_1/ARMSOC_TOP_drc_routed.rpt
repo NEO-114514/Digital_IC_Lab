@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Dec 25 16:23:20 2024
+| Date         : Fri Dec 27 16:14:24 2024
 | Host         : HUNTER running 64-bit major release  (build 9200)
 | Command      : report_drc -file ARMSOC_TOP_drc_routed.rpt -pb ARMSOC_TOP_drc_routed.pb -rpx ARMSOC_TOP_drc_routed.rpx
 | Design       : ARMSOC_TOP
@@ -24,7 +24,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 35
+             Violations found: 36
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
@@ -35,6 +35,7 @@ Table of Contents
 | DPOP-2    | Warning  | MREG Output pipelining                              | 3          |
 | PLCK-12   | Warning  | Clock Placer Checks                                 | 1          |
 | REQP-1839 | Warning  | RAMB36 async control check                          | 20         |
+| RTSTAT-10 | Warning  | No routable loads                                   | 1          |
 +-----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -124,7 +125,7 @@ Resolution: Poor placement of an IO pin and a BUFG has resulted in the router us
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
 	TCK_IBUF_inst (IBUF.O) is locked to F18
-	TCK_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y1
+	TCK_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y2
 
 Related violations: <none>
 
@@ -195,37 +196,42 @@ Related violations: <none>
 
 REQP-1839#14 Warning
 RAMB36 async control check  
-The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Hbozz6_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/B97u07_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#15 Warning
 RAMB36 async control check  
-The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Hbpm17_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Bdys07_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#16 Warning
 RAMB36 async control check  
-The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Hzwf07_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Bmom17_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#17 Warning
 RAMB36 async control check  
-The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ijys07_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Bnjzz6_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#18 Warning
 RAMB36 async control check  
-The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Ilnm17_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Brpm17_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#19 Warning
 RAMB36 async control check  
-The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/J3im17_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Bu4107_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
 Related violations: <none>
 
 REQP-1839#20 Warning
 RAMB36 async control check  
-The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Je7m17_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+The RAMB36E1 uAHB2RAM/memory_reg_0_0 has an input control pin uAHB2RAM/memory_reg_0_0/ADDRBWRADDR[14] (net: uAHB2RAM/HADDRS[14]) which is driven by a register (u_CORTEXM3INTEGRATION/u_cortexm3ds_logic/Grnm17_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+25 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, your_instance_name/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13], your_instance_name/inst/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[14] (the first 15 of 23 listed).
 Related violations: <none>
 
 

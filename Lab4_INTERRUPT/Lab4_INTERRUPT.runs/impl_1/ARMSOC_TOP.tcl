@@ -65,6 +65,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param general.maxThreads 16
   set_param chipscope.maxJobs 4
   set_param xicom.use_bs_reader 1
@@ -75,10 +76,11 @@ set rc [catch {
   set_property parent.project_path D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Lab4_INTERRUPT.xpr [current_project]
   set_property ip_output_repo D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Lab4_INTERRUPT.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Lab4_INTERRUPT.runs/synth_1/ARMSOC_TOP.dcp
   read_ip -quiet D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Lab4_INTERRUPT.srcs/sources_1/ip/clk_50M/clk_50M.xci
   read_ip -quiet D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Lab4_INTERRUPT.srcs/sources_1/ip/clk_25M/clk_25M.xci
+  read_ip -quiet d:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/Lab4_INTERRUPT.srcs/sources_1/ip/ila_0/ila_0.xci
   read_edif D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/FPGA/CortexM3-DS/CORTEXM3INTEGRATIONDS.edf
   read_xdc D:/Digital_IC/Digital_IC_Lab/Lab4_INTERRUPT/FPGA/ARMSOC.xdc
   link_design -top ARMSOC_TOP -part xc7a100tcsg324-1
@@ -160,7 +162,7 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force ARMSOC_TOP.mmi }
   write_bitstream -force ARMSOC_TOP.bit 
   catch {write_debug_probes -quiet -force ARMSOC_TOP}

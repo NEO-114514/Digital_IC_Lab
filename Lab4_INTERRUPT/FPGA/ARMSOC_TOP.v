@@ -381,8 +381,8 @@ module ARMSOC_TOP (
        .HALTED         (),                   // The processor is halted
        .DBGRESTARTED   (),                   // Debug Restart interface handshaking
        .LOCKUP         (lockup),             // The processor is locked up
-       .SLEEPING       (),                   // The processor is in sleep mdoe (sleep/deep sleep)
-       .SLEEPDEEP      (),                   // The processor is in deep sleep mode
+       .SLEEPING       (sleeping),             // The processor is in sleep mdoe (sleep/deep sleep)
+       .SLEEPDEEP      (LED[7]),             // The processor is in deep sleep mode
        .SLEEPHOLDACKn  (),                   // Acknowledge for SLEEPHOLDREQn
        .ETMINTNUM      (),                   // Current exception number
        .ETMINTSTAT     (),                   // Exception/Interrupt activation status
@@ -553,11 +553,21 @@ module ARMSOC_TOP (
         .HTRANS(htranss),
         .HSEL(hsel_gpio),
         .HREADY(hreadys),
-        .GPIOIN({8'b00000000, SW[7:0]}),
+        .GPIOIN({10'b0, SW[5:0]}),
         .HREADYOUT(hready_gpio),
         .HRDATA(hrdata_gpio),
-        .GPIOOUT(LED[7:0]),
+        .GPIOOUT(LED[5:0]),
         .gpio_irq(gpio_irq)
+    );
+
+    assign LED[6] = sleeping;
+
+    ila_0 your_instance_name (
+        .clk(fclk),             // input wire clk
+        .probe0(SW),            // input wire [7:0]  probe0  
+        .probe1(LED),           // input wire [7:0]  probe1 
+        .probe2(UART_TXD),      // input wire [0:0]  probe2 
+        .probe3(sleeping)       // input wire [0:0]  probe3
     );
 
 endmodule

@@ -75,8 +75,6 @@ Timer_Handler   PROC
                 POP     {R0,R1,R2,PC}                    ;return
                 ENDP
 
-
-
 UART_Handler    PROC
                 EXPORT UART_Handler
 				IMPORT UART_ISR

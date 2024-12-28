@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1735114784">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1735286990">
   <File Type="PA-TCL" Name="ARMSOC_TOP.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="ARMSOC_TOP_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ARMSOC_TOP_reports.tcl"/>
@@ -186,4 +186,5 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="clk_25M"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_50M"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
 </GenRun>

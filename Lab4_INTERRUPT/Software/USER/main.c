@@ -39,16 +39,17 @@ void Timer_ISR(void);
 
 int main(void)
 {
-    static int i;
     TIMER_LOAD_REG = 25000000;                // Timer load register: =<clock frequency>
     TIMER_CONTROL_REG = 0x03;                 // Timer 4-bits control register: [0]: timer enable, [1] mode (free-run or reload) [2]: prescaler
 
     NVIC_INT_PRIORITY0_REG = 0x00010200;      // Priority: IRQ0(Timer): 0x00, IRQ1(UART): 0x40
     NVIC_INT_ENABLE_REG = 0x00000007;         // Enable interrupts for UART and timer
 
-    while (1) {
 
+    while (1) {
+	  __asm("wfi");
     }
+		
 }
 
 
@@ -61,7 +62,7 @@ void Timer_ISR()
 	VGA_DISPLAY_REG = ' ';                    // Print space
 
 	counter++;
-	if (counter == 0x4A)
+	if (counter == 0x3A)
 			TIMER_CONTROL_REG = 0;                // Stop timer if counter reaches 9
 
 	TIMER_INT_CLEAR_REG = 1;                  // Clear timer interrupt request
@@ -69,30 +70,29 @@ void Timer_ISR()
 
 volatile static int i;
 volatile static char output_char;
-volatile static int last_state = 0x00;
-volatile static int current_state;
-
+volatile static int current_state[8] = {0};
+volatile static int last_state[8] = {0};
+		
 void GPIO_ISR()
 {
     GPIO_MODE_REG = 0x00;                 // GPIO read mode
-    current_state = GPIO_DATA_REG;        // Read switch
+    int gpio_data = GPIO_DATA_REG;        // Read switch
 
-    for (int bit = 0; bit < 8; bit++) {   // Check each bit (switch)
-        if ((current_state & (1 << bit)) != (last_state & (1 << bit))) { // Detect state change
-            if (current_state & (1 << bit)) { // If switch is turned ON
-                output_char = '0' + bit;      // Determine switch number (0-based)
-            } else {                         // If switch is turned OFF
-                output_char = '0' + bit;      // Determine switch number (0-based)
-            }
-            UART_DATA_REG = output_char;      // Output character via UART
-            break;                            // Stop checking after the first detected change
+    for (int bit = 0; bit < 8; bit++) {
+        current_state[bit] = (gpio_data >> bit) & 0x01; // Extract each bit's state
+
+        if (current_state[bit] != last_state[bit]) {    // Detect state change
+            output_char = '0' + bit;                   // Determine switch number (0-based)
+            while ((UART_STATUS_REG & 0x01) == 0);     // Wait for UART to be ready
+            UART_DATA_REG = output_char;               // Output character via UART
         }
+
+        last_state[bit] = current_state[bit];          // Update last state
     }
 
-    last_state = current_state;           // Update last state
-
     GPIO_MODE_REG = 0x01;                 // GPIO write mode
-    GPIO_DATA_REG = current_state;        // Write to the LEDs
+    GPIO_DATA_REG = gpio_data;            // Write to the LEDs
+		for( i=0 ; i<0x2F ;i++);
 }
 
 volatile uint32_t last_received = 0;  // 保存上一个接收到的字符

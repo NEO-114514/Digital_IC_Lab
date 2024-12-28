@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Wed Dec 25 16:23:31 2024
+| Date             : Fri Dec 27 16:14:38 2024
 | Host             : HUNTER running 64-bit major release  (build 9200)
 | Command          : report_power -file ARMSOC_TOP_power_routed.rpt -pb ARMSOC_TOP_power_summary_routed.pb -rpx ARMSOC_TOP_power_routed.rpx
 | Design           : ARMSOC_TOP
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.365        |
+| Total On-Chip Power (W)  | 0.372        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.266        |
-| Device Static (W)        | 0.099        |
+| Dynamic (W)              | 0.270        |
+| Device Static (W)        | 0.102        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.3         |
 | Junction Temperature (C) | 26.7         |
@@ -52,21 +52,22 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.011 |       12 |       --- |             --- |
-| Slice Logic              |     0.007 |    23860 |       --- |             --- |
-|   LUT as Logic           |     0.007 |    15508 |     63400 |           24.46 |
-|   CARRY4                 |    <0.001 |      332 |     15850 |            2.09 |
-|   Register               |    <0.001 |     5896 |    126800 |            4.65 |
-|   F7/F8 Muxes            |    <0.001 |       24 |     63400 |            0.04 |
-|   LUT as Distributed RAM |    <0.001 |       16 |     19000 |            0.08 |
-|   Others                 |     0.000 |       52 |       --- |             --- |
-| Signals                  |     0.010 |    21262 |       --- |             --- |
-| Block RAM                |     0.015 |     25.5 |       135 |           18.89 |
+| Clocks                   |     0.014 |       13 |       --- |             --- |
+| Slice Logic              |     0.007 |    28374 |       --- |             --- |
+|   LUT as Logic           |     0.007 |    16959 |     63400 |           26.75 |
+|   CARRY4                 |    <0.001 |      381 |     15850 |            2.40 |
+|   Register               |    <0.001 |     8047 |    126800 |            6.35 |
+|   LUT as Shift Register  |    <0.001 |       97 |     19000 |            0.51 |
+|   LUT as Distributed RAM |    <0.001 |       40 |     19000 |            0.21 |
+|   F7/F8 Muxes            |    <0.001 |       98 |     63400 |            0.15 |
+|   Others                 |     0.000 |      493 |       --- |             --- |
+| Signals                  |     0.011 |    24955 |       --- |             --- |
+| Block RAM                |     0.015 |     93.5 |       135 |           69.26 |
 | MMCM                     |     0.221 |        2 |         6 |           33.33 |
 | DSPs                     |    <0.001 |        3 |       240 |            1.25 |
 | I/O                      |    <0.001 |       34 |       210 |           16.19 |
-| Static Power             |     0.099 |          |           |                 |
-| Total                    |     0.365 |          |           |                 |
+| Static Power             |     0.102 |          |           |                 |
+| Total                    |     0.372 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.060 |       0.043 |      0.016 |
+| Vccint    |       1.000 |     0.065 |       0.047 |      0.018 |
 | Vccaux    |       1.800 |     0.141 |       0.123 |      0.018 |
 | Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -85,7 +86,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.002 |       0.001 |      0.001 |
+| Vccbram   |       1.000 |     0.004 |       0.001 |      0.003 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
@@ -129,21 +130,22 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------+---------------------------------+-----------------+
-| Clock              | Domain                          | Constraint (ns) |
-+--------------------+---------------------------------+-----------------+
-| CLK                | CLK                             |            10.0 |
-| clk_out1_clk_25M_1 | u_clk_25M/inst/clk_out1_clk_25M |            40.0 |
-| clk_out1_clk_50M   | clk_50                          |            20.0 |
-| clk_out1_clk_50M   | u_clk_50M/inst/clk_out1_clk_50M |            20.0 |
-| clk_out1_clk_50M_1 | clk_50                          |            20.0 |
-| clk_out1_clk_50M_1 | u_clk_50M/inst/clk_out1_clk_50M |            20.0 |
-| clkfbout_clk_25M_1 | u_clk_25M/inst/clkfbout_clk_25M |            20.0 |
-| clkfbout_clk_50M   | u_clk_50M/inst/clkfbout_clk_50M |            10.0 |
-| clkfbout_clk_50M_1 | u_clk_50M/inst/clkfbout_clk_50M |            10.0 |
-| dbg_tck_pin        | TCK                             |            40.0 |
-| sys_clk_pin        | CLK                             |            10.0 |
-+--------------------+---------------------------------+-----------------+
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| Clock                                                                                      | Domain                                                               | Constraint (ns) |
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
+| CLK                                                                                        | CLK                                                                  |            10.0 |
+| clk_out1_clk_25M_1                                                                         | u_clk_25M/inst/clk_out1_clk_25M                                      |            40.0 |
+| clk_out1_clk_50M                                                                           | clk_50                                                               |            20.0 |
+| clk_out1_clk_50M                                                                           | u_clk_50M/inst/clk_out1_clk_50M                                      |            20.0 |
+| clk_out1_clk_50M_1                                                                         | clk_50                                                               |            20.0 |
+| clk_out1_clk_50M_1                                                                         | u_clk_50M/inst/clk_out1_clk_50M                                      |            20.0 |
+| clkfbout_clk_25M_1                                                                         | u_clk_25M/inst/clkfbout_clk_25M                                      |            20.0 |
+| clkfbout_clk_50M                                                                           | u_clk_50M/inst/clkfbout_clk_50M                                      |            10.0 |
+| clkfbout_clk_50M_1                                                                         | u_clk_50M/inst/clkfbout_clk_50M                                      |            10.0 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/tck_bs |            33.0 |
+| dbg_tck_pin                                                                                | TCK                                                                  |            40.0 |
+| sys_clk_pin                                                                                | CLK                                                                  |            10.0 |
++--------------------------------------------------------------------------------------------+----------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -152,23 +154,29 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------------------+-----------+
-| Name                    | Power (W) |
-+-------------------------+-----------+
-| ARMSOC_TOP              |     0.266 |
-|   uAHB2RAM              |     0.004 |
-|   uAHB2ROM              |     0.004 |
-|   uAHBVGA               |     0.009 |
-|     uVGAInterface       |     0.001 |
-|     uvga_console        |     0.001 |
-|     uvga_image          |     0.006 |
-|       uimage_ram        |     0.006 |
-|   u_CORTEXM3INTEGRATION |     0.026 |
-|     u_cortexm3ds_logic  |     0.026 |
-|   u_clk_25M             |     0.116 |
-|     inst                |     0.116 |
-|   u_clk_50M             |     0.106 |
-|     inst                |     0.106 |
-+-------------------------+-----------+
++--------------------------+-----------+
+| Name                     | Power (W) |
++--------------------------+-----------+
+| ARMSOC_TOP               |     0.270 |
+|   dbg_hub                |     0.002 |
+|     inst                 |     0.002 |
+|       BSCANID.u_xsdbm_id |     0.002 |
+|   uAHB2RAM               |     0.004 |
+|   uAHB2ROM               |     0.004 |
+|   uAHBVGA                |     0.009 |
+|     uVGAInterface        |     0.001 |
+|     uvga_console         |     0.001 |
+|     uvga_image           |     0.006 |
+|       uimage_ram         |     0.006 |
+|   u_CORTEXM3INTEGRATION  |     0.024 |
+|     u_cortexm3ds_logic   |     0.024 |
+|   u_clk_25M              |     0.116 |
+|     inst                 |     0.116 |
+|   u_clk_50M              |     0.106 |
+|     inst                 |     0.106 |
+|   your_instance_name     |     0.003 |
+|     inst                 |     0.003 |
+|       ila_core_inst      |     0.003 |
++--------------------------+-----------+
 
 

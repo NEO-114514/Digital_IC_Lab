@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1735114784">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1735286990">
   <File Type="BITSTR-BMM" Name="ARMSOC_TOP_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="ARMSOC_TOP_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="ARMSOC_TOP_timing_summary_init.rpt"/>
@@ -254,4 +254,5 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="clk_25M"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_50M"/>
+  <BlockFileSet Type="BlockSrcs" Name="ila_0"/>
 </GenRun>

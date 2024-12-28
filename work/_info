@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dd:/Digital_IC/Digital_IC_Lab
 vAHBGPIO
-!s110 1735110762
+!s110 1735361087
 !i10b 1
 !s100 ^:UaHkIkoN^QY4eRR04EX1
 Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -19,14 +19,14 @@ R0
 w1735110761
 8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_GPIO\AHBGPIO.v
 Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_GPIO\AHBGPIO.v
-!i122 6
+!i122 24
 L0 38 111
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 OL;L;2020.4;71
 r1
 !s85 0
 31
-!s108 1735110761.000000
+!s108 1735361085.000000
 !s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_GPIO\AHBGPIO.v|
 !s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_GPIO\AHBGPIO.v|
 !i113 0
@@ -34,23 +34,23 @@ Z4 o-nologo -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infa
 Z5 tCvgOpt 0
 n@a@h@b@g@p@i@o
 vARMSOC_TOP
-!s110 1735114778
+!s110 1735286981
 !i10b 1
-!s100 ::hUJ1`5omWz?^`IDnKo<3
+!s100 k`9fddK>ZgH4nF?A61>7@1
 R1
-IQRzml2g9kG9E==P=^4Ign1
+IEM8iXJd[7l3oUX:A;5kW[2
 R0
-w1735114778
+w1735286981
 8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\ARMSOC_TOP.v
 Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\ARMSOC_TOP.v
-!i122 9
-L0 37 527
+!i122 23
+L0 37 537
 R2
 R3
 r1
 !s85 0
 31
-!s108 1735114778.000000
+!s108 1735286981.000000
 !s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\ARMSOC_TOP.v|
 !s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\ARMSOC_TOP.v|
 !i113 0

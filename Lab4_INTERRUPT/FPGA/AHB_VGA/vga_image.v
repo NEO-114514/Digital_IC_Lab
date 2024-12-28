@@ -104,7 +104,7 @@ module vga_image(
       3'b001:  addr_r <= {1'b0, img_x[9:1], 2'b0, img_y[8:1]};
       3'b010:  addr_r <= {2'b0, img_x[9:2], 3'b0, img_y[8:2]};
 
-      default:  addr_r <= {1'b0, img_x[9:0], img_y[8:0]};
+      default:  addr_r <= {1'b0, img_x[9:2], img_y[8:2]};
 
     endcase
 

@@ -103,7 +103,7 @@ module ARMSOC_TOP (
     wire          gpio_irq;
 
     // Interrupt signals
-    assign        irq[239:3] = 238'b0;
+    assign        irq[239:3] = 237'b0;
 
     assign irq[0] = timer_irq;
     assign irq[1] = uart_irq;

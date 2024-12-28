@@ -33,27 +33,191 @@ r1
 Z4 o-nologo -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z5 tCvgOpt 0
 n@a@h@b@g@p@i@o
-vARMSOC_TOP
-!s110 1735286981
+vAHBVGA
+!s110 1735361889
 !i10b 1
-!s100 k`9fddK>ZgH4nF?A61>7@1
+!s100 lDW]O`5k9_^LgT0[<Vz8c0
 R1
-IEM8iXJd[7l3oUX:A;5kW[2
+I2R6c9m[P:MRETaSbgj[Oc3
 R0
-w1735286981
+w1734587697
+8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\AHBVGASYS.v
+Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\AHBVGASYS.v
+!i122 30
+L0 38 245
+R2
+R3
+r1
+!s85 0
+31
+!s108 1735361889.000000
+!s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\AHBVGASYS.v|
+!s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\AHBVGASYS.v|
+!i113 0
+R4
+R5
+n@a@h@b@v@g@a
+vARMSOC_TOP
+!s110 1735361977
+!i10b 1
+!s100 :_OciI0aZAF?jY<R1DG:I1
+R1
+Iol]dh[`Vn5H47gKnPOd;S0
+R0
+w1735361977
 8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\ARMSOC_TOP.v
 Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\ARMSOC_TOP.v
-!i122 23
+!i122 40
 L0 37 537
 R2
 R3
 r1
 !s85 0
 31
-!s108 1735286981.000000
+!s108 1735361977.000000
 !s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\ARMSOC_TOP.v|
 !s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\ARMSOC_TOP.v|
 !i113 0
 R4
 R5
 n@a@r@m@s@o@c_@t@o@p
+vdual_port_ram_sync
+!s110 1735361961
+!i10b 1
+!s100 jCWBF`IGD^cT50`I2a1M61
+R1
+I^X==n:j]lk3W7MR>X@gzn0
+R0
+w1735361961
+8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\dual_port_ram_sync.v
+Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\dual_port_ram_sync.v
+!i122 38
+L0 37 49
+R2
+R3
+r1
+!s85 0
+31
+!s108 1735361961.000000
+!s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\dual_port_ram_sync.v|
+!s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\dual_port_ram_sync.v|
+!i113 0
+R4
+R5
+vfont_rom
+!s110 1735361893
+!i10b 1
+!s100 G4[VYU]ENDI9mPdznY`m;3
+R1
+IMj1zJYIEG4^M4@^7U2odH1
+R0
+w1337002010
+8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\font_rom.v
+Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\font_rom.v
+!i122 32
+L0 37 2195
+R2
+R3
+r1
+!s85 0
+31
+!s108 1735361893.000000
+!s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\font_rom.v|
+!s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\font_rom.v|
+!i113 0
+R4
+R5
+vGenericCounter
+!s110 1735361954
+!i10b 1
+!s100 DUW5z_[^d?IGj8>UIFB[P1
+R1
+ILN8=?M[YTH10FWJROQNA;2
+R0
+w1590593905
+8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\counter.v
+Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\counter.v
+!i122 36
+L0 38 48
+R2
+R3
+r1
+!s85 0
+31
+!s108 1735361954.000000
+!s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\counter.v|
+!s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\counter.v|
+!i113 0
+R4
+R5
+n@generic@counter
+vvga_console
+!s110 1735361938
+!i10b 1
+!s100 HnzN9eFGSmc4L6fEaLjH90
+R1
+IkdbbFSHQ0FZ6Eh1mzJ;@n0
+R0
+w1731402752
+8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_console.v
+Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_console.v
+!i122 34
+L0 38 274
+R2
+R3
+r1
+!s85 0
+31
+!s108 1735361937.000000
+!s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_console.v|
+!s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_console.v|
+!i113 0
+R4
+R5
+vvga_image
+!s110 1735361972
+!i10b 1
+!s100 ^9AKf6EO[NZRA1dMGd]Ee1
+R1
+IIOl`oFB>X:RbF<_z3<mN@2
+R0
+w1735361971
+8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_image.v
+Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_image.v
+!i122 39
+L0 38 80
+R2
+R3
+r1
+!s85 0
+31
+!s108 1735361972.000000
+!s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_image.v|
+!s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_image.v|
+!i113 0
+R4
+R5
+vVGAInterface
+!s110 1735361943
+!i10b 1
+!s100 i9d8c]0=UHlF8oQjf2RX73
+R1
+Im9R65EHUkiPMni>VZ]n]61
+R0
+w1731483360
+8d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_sync.v
+Fd:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_sync.v
+!i122 35
+L0 37 96
+R2
+R3
+r1
+!s85 0
+31
+!s108 1735361943.000000
+!s107 d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_sync.v|
+!s90 -nologo|-work|work|d:\Digital_IC\Digital_IC_Lab\Lab4_INTERRUPT\FPGA\AHB_VGA\vga_sync.v|
+!i113 0
+R4
+R5
+n@v@g@a@interface

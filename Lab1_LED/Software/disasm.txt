@@ -31,8 +31,8 @@
     Program header entries: 1
     Section header entries: 14
 
-    Program header offset: 11116 (0x00002b6c)
-    Section header offset: 11148 (0x00002b8c)
+    Program header offset: 11028 (0x00002b14)
+    Section header offset: 11060 (0x00002b34)
 
     Section header string table index: 13
 
@@ -44,8 +44,8 @@
     File Offset   : 52 (0x34)
     Virtual Addr  : 0x00000000
     Physical Addr : 0x00000000
-    Size in file  : 496 bytes (0x1f0)
-    Size in memory: 4688 bytes (0x1250)
+    Size in file  : 476 bytes (0x1dc)
+    Size in memory: 4668 bytes (0x123c)
     Flags         : PF_X + PF_W + PF_R + PF_ARM_ENTRY (0x80000007)
     Alignment     : 8
 
@@ -59,7 +59,7 @@
     Flags       : SHF_ALLOC + SHF_EXECINSTR (0x00000006)
     Addr        : 0x00000000
     File Offset : 52 (0x34)
-    Size        : 496 bytes (0x1f0)
+    Size        : 476 bytes (0x1dc)
     Link        : SHN_UNDEF
     Info        : 0
     Alignment   : 4
@@ -126,8 +126,8 @@
         0x000000ae:    f0430301    C...    ORR      r3,r3,#1
         0x000000b2:    4718        .G      BX       r3
     $d
-        0x000000b4:    0000012c    ,...    DCD    300
-        0x000000b8:    0000013c    <...    DCD    316
+        0x000000b4:    00000118    ....    DCD    280
+        0x000000b8:    00000128    (...    DCD    296
     $t
     !!handler_zi
     __scatterload_zeroinit
@@ -329,44 +329,32 @@
     .text
     __semihosting_library_function
     main
-        0x0000019e:    b508        ..      PUSH     {r3,lr}
-        0x000001a0:    2000        .       MOVS     r0,#0
-        0x000001a2:    f04f41a0    O..A    MOV      r1,#0x50000000
-        0x000001a6:    6008        .`      STR      r0,[r1,#0]
-        0x000001a8:    6048        H`      STR      r0,[r1,#4]
-        0x000001aa:    e017        ..      B        0x1dc ; __semihosting_library_function + 62
-        0x000001ac:    2055        U       MOVS     r0,#0x55
-        0x000001ae:    0701        ..      LSLS     r1,r0,#28
-        0x000001b0:    6008        .`      STR      r0,[r1,#0]
-        0x000001b2:    2000        .       MOVS     r0,#0
-        0x000001b4:    9000        ..      STR      r0,[sp,#0]
-        0x000001b6:    e002        ..      B        0x1be ; __semihosting_library_function + 32
-        0x000001b8:    9800        ..      LDR      r0,[sp,#0]
-        0x000001ba:    1c40        @.      ADDS     r0,r0,#1
-        0x000001bc:    9000        ..      STR      r0,[sp,#0]
-        0x000001be:    9800        ..      LDR      r0,[sp,#0]
-        0x000001c0:    282f        /(      CMP      r0,#0x2f
-        0x000001c2:    dbf9        ..      BLT      0x1b8 ; __semihosting_library_function + 26
-        0x000001c4:    20aa        .       MOVS     r0,#0xaa
-        0x000001c6:    06c1        ..      LSLS     r1,r0,#27
-        0x000001c8:    6008        .`      STR      r0,[r1,#0]
-        0x000001ca:    2000        .       MOVS     r0,#0
-        0x000001cc:    9000        ..      STR      r0,[sp,#0]
-        0x000001ce:    e002        ..      B        0x1d6 ; __semihosting_library_function + 56
-        0x000001d0:    9800        ..      LDR      r0,[sp,#0]
-        0x000001d2:    1c40        @.      ADDS     r0,r0,#1
-        0x000001d4:    9000        ..      STR      r0,[sp,#0]
-        0x000001d6:    9800        ..      LDR      r0,[sp,#0]
-        0x000001d8:    282f        /(      CMP      r0,#0x2f
-        0x000001da:    dbf9        ..      BLT      0x1d0 ; __semihosting_library_function + 50
-        0x000001dc:    e7e6        ..      B        0x1ac ; __semihosting_library_function + 14
-        0x000001de:    0000        ..      MOVS     r0,r0
+        0x0000019e:    2000        .       MOVS     r0,#0
+        0x000001a0:    f04f41a0    O..A    MOV      r1,#0x50000000
+        0x000001a4:    6008        .`      STR      r0,[r1,#0]
+        0x000001a6:    6048        H`      STR      r0,[r1,#4]
+        0x000001a8:    e00e        ..      B        0x1c8 ; __semihosting_library_function + 42
+        0x000001aa:    f04f40a2    O..@    MOV      r0,#0x51000000
+        0x000001ae:    6900        .i      LDR      r0,[r0,#0x10]
+        0x000001b0:    2801        .(      CMP      r0,#1
+        0x000001b2:    d102        ..      BNE      0x1ba ; __semihosting_library_function + 28
+        0x000001b4:    2055        U       MOVS     r0,#0x55
+        0x000001b6:    0701        ..      LSLS     r1,r0,#28
+        0x000001b8:    6008        .`      STR      r0,[r1,#0]
+        0x000001ba:    f04f40a2    O..@    MOV      r0,#0x51000000
+        0x000001be:    6900        .i      LDR      r0,[r0,#0x10]
+        0x000001c0:    b910        ..      CBNZ     r0,0x1c8 ; __semihosting_library_function + 42
+        0x000001c2:    20aa        .       MOVS     r0,#0xaa
+        0x000001c4:    06c1        ..      LSLS     r1,r0,#27
+        0x000001c6:    6008        .`      STR      r0,[r1,#0]
+        0x000001c8:    e7ef        ..      B        0x1aa ; __semihosting_library_function + 12
+        0x000001ca:    0000        ..      MOVS     r0,r0
     $d.realdata
     Region$$Table$$Base
-        0x000001e0:    000001f0    ....    DCD    496
-        0x000001e4:    20000000    ...     DCD    536870912
-        0x000001e8:    00001060    `...    DCD    4192
-        0x000001ec:    000000bc    ....    DCD    188
+        0x000001cc:    000001dc    ....    DCD    476
+        0x000001d0:    20000000    ...     DCD    536870912
+        0x000001d4:    00001060    `...    DCD    4192
+        0x000001d8:    000000bc    ....    DCD    188
     Region$$Table$$Limit
 
 ====================================
@@ -377,7 +365,7 @@
     Type        : SHT_NOBITS (0x00000008)
     Flags       : SHF_ALLOC + SHF_WRITE (0x00000003)
     Addr        : 0x20000000
-    File Offset : 548 (0x224)
+    File Offset : 528 (0x210)
     Size        : 4192 bytes (0x1060)
     Link        : SHN_UNDEF
     Info        : 0
@@ -393,7 +381,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 548 (0x224)
+    File Offset : 528 (0x210)
     Size        : 1476 bytes (0x5c4)
     Link        : SHN_UNDEF
     Info        : 0
@@ -409,8 +397,8 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 2024 (0x7e8)
-    Size        : 568 bytes (0x238)
+    File Offset : 2004 (0x7d4)
+    Size        : 560 bytes (0x230)
     Link        : SHN_UNDEF
     Info        : 0
     Alignment   : 1
@@ -425,8 +413,8 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 2592 (0xa20)
-    Size        : 432 bytes (0x1b0)
+    File Offset : 2564 (0xa04)
+    Size        : 416 bytes (0x1a0)
     Link        : SHN_UNDEF
     Info        : 0
     Alignment   : 1
@@ -441,8 +429,8 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 3024 (0xbd0)
-    Size        : 192 bytes (0xc0)
+    File Offset : 2980 (0xba4)
+    Size        : 160 bytes (0xa0)
     Link        : SHN_UNDEF
     Info        : 0
     Alignment   : 1
@@ -457,8 +445,8 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 3216 (0xc90)
-    Size        : 32 bytes (0x20)
+    File Offset : 3140 (0xc44)
+    Size        : 20 bytes (0x14)
     Link        : SHN_UNDEF
     Info        : 0
     Alignment   : 1
@@ -473,7 +461,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 3248 (0xcb0)
+    File Offset : 3160 (0xc58)
     Size        : 27 bytes (0x1b)
     Link        : SHN_UNDEF
     Info        : 0
@@ -489,7 +477,7 @@
     Type        : SHT_SYMTAB (0x00000002)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 3276 (0xccc)
+    File Offset : 3188 (0xc74)
     Size        : 3104 bytes (0xc20)
     Link        : Section 10 (.strtab)
     Info        : Last local symbol no = 123
@@ -505,7 +493,7 @@
     Type        : SHT_STRTAB (0x00000003)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 6380 (0x18ec)
+    File Offset : 6292 (0x1894)
     Size        : 3432 bytes (0xd68)
     Link        : SHN_UNDEF
     Info        : 0
@@ -521,7 +509,7 @@
     Type        : SHT_NOTE (0x00000007)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 9812 (0x2654)
+    File Offset : 9724 (0x25fc)
     Size        : 24 bytes (0x18)
     Link        : SHN_UNDEF
     Info        : 0
@@ -542,7 +530,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 9836 (0x266c)
+    File Offset : 9748 (0x2614)
     Size        : 1140 bytes (0x474)
     Link        : SHN_UNDEF
     Info        : 0
@@ -580,7 +568,7 @@
     Type        : SHT_STRTAB (0x00000003)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 10976 (0x2ae0)
+    File Offset : 10888 (0x2a88)
     Size        : 140 bytes (0x8c)
     Link        : SHN_UNDEF
     Info        : 0

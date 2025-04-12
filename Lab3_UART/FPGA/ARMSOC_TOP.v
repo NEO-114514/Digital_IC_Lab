@@ -114,6 +114,7 @@ module ARMSOC_TOP (
 
 ////双时钟
     wire clk_50_div; 
+    
     clk_50M u_clk_50M(
     .resetn(RESET),
     .clk_in1(CLK),

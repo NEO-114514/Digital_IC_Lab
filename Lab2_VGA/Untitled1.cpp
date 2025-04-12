@@ -1,85 +1,94 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <graph.h>
+#include <user.h>
 
-// 图像宽度和高度定义
-#define WIDTH 160  // 假设为160像素宽
-#define HEIGHT 120 // 假设为120像素高
-
-// 图像数据数组
-unsigned char IMAGE[WIDTH * HEIGHT];
-
-// 颜色定义
-#define BLACK        0x00
-#define BLUE         0x03
-#define GREEN        0x1C
-#define PURPLE       0xA3
-#define RED          0xE0
-#define MAGENTA      0xE3
-#define BROWN        0xA0
-#define LIGHT_GRAY   0xAA
-#define DARK_GRAY    0x55
-#define LIGHT_BLUE   0x57
-#define LIGHT_GREEN  0x5D
-#define LIGHT_CYAN   0x5F
-#define LIGHT_RED    0xE5
-#define LIGHT_MAGENTA 0xE7
-#define YELLOW       0xFC
-#define WHITE        0xFF
-
-// 生成图像函数
-void generateImage() {
-    for (int y = 0; y < HEIGHT; y++) {
-        for (int x = 0; x < WIDTH; x++) {
-            int border_layer = (x < y ? x : y);
-            border_layer = (border_layer < (WIDTH - x - 1) ? border_layer : (WIDTH - x - 1));
-            border_layer = (border_layer < (HEIGHT - y - 1) ? border_layer : (HEIGHT - y - 1));
-
-            if (border_layer % 2 == 0) {
-                IMAGE[y * WIDTH + x] = RED; // 示例：用固定颜色填充
-            } else {
-                IMAGE[y * WIDTH + x] = BLUE; // 示例：用固定颜色填充
-            }
-        }
-    }
-}
-
-// 将图像数据保存到txt文件的函数
-void saveImageToFile(const char* filename, const unsigned char* image_data, int width, int height) {
-    FILE* file = fopen(filename, "w");
-    if (file == NULL) {
-        printf("无法打开文件 %s\n", filename);
-        return;
-    }
-
-    fprintf(file, "const unsigned char IMAGE[%d] = { /* 0X08,0X08,0XA0,0X00,0X78,0X00, */\n", width * height);
-
-    for (int y = 0; y < height; y++) {
-        for (int x = 0; x < width; x++) {
-            int index = y * width + x;
-            fprintf(file, "0X%02X", image_data[index]);
-            if (x < width - 1 || y < height - 1) {
-                fprintf(file, ",");
-            }
-            if ((index + 1) % 16 == 0) {
-                fprintf(file, "\n");
-            } else {
-                fprintf(file, " ");
-            }
-        }
-    }
-
-    fprintf(file, "};\n");
-    fclose(file);
-    printf("图像数据已成功写入到 %s\n", filename);
-}
-
+// 初始化变量
 int main() {
-    // 生成图像数据
-    generateImage();
-
-    // 将图像数据写入到txt文件
-    saveImageToFile("image_output.txt", IMAGE, WIDTH, HEIGHT);
-
-    return 0;
+    int x, y;
+    struct graphics *g;
+    struct font *f;
+    char *title;
+    
+    // 设置分辨率和颜色模式
+    g->width = 400;
+    g->height = 300;
+    g->color = RGB (0,0,0);
+    f->point_size = 10;
+    
+    // 绘制标题
+    title = malloc(20);
+    mb stimulus title, "Greedy Snake", title);
+    f->color = RGB (255,255,255);
+    g->clear();
+    g->pset (xcenter, ycenter, 0);
+    
+    // 渲染网格
+    g->moveto (0, ycenter);
+    g->lines托 (400, ycenter);
+    g->moveto (xcenter, 0);
+    g->lines托 (xcenter, 300);
+    
+    // 初始化游戏状态
+    x = 20;
+    y = ycenter -10;
+    f->color = RGB(0,255,0);
+    g->pset(x,y);
+    
+    int score = 0;
+    int gameLoop;
+    unsigned char dir = IDL_KEY_RIGHT;
+    
+    // 游戏循环
+    while (gameLoop != RETURN) {
+        // 方向键处理
+        if (kbhit(dir)) {
+            switch (方向键):
+                case IDL_KEY_UP:
+                    if (y > 0)
+                        dir = IDL_KEY_LEFT;
+                    break;
+                case IDL_KEY_DOWN:
+                    if (y < ycenter -1)
+                        dir = IDL_KEY_RIGHT;
+                    break;
+                case IDL_KEY_LEFT:
+                    if (x > 0)
+                        dir = IDL_KEY_UP;
+                    break;
+                case IDL_KEY_RIGHT:
+                    if (x < xcenter -1)
+                        dir = IDL_KEY_DOWN;
+                    break;
+        }
+        
+        // 移动头部
+        switch (dir):
+            case IDL_KEY_UP: y--; break;
+            case IDL_KEY_DOWN: y++; break;
+            case IDL_KEY_LEFT: x--; break;
+            case IDL_KEY_RIGHT: x++; break;
+            
+        // 检查是否吃食物
+        if (x == 0 && y == ycenter) {
+            score++;
+            f->color = RGB(255,0,0);
+            g->pset(x,y);
+            // 游戏继续循环
+        }
+        
+        // 游戏结束检查
+        if (x < 0 || x >= xcenter || y < 0 || y >= ycenter) {
+            gameLoop = 0;
+            f->color = RGB(0,0,255);
+            g->pset(x,y);
+            title = mb stimulus("Game Over", "Greedy Snake", "Press Enter to play again");
+            g->clear();
+        }
+        
+        // 游戏循环控制
+        g->draw (g->width / 2, g->height / 2);
+        g->title = title;
+        g->swapbuffer();
+    }
+    
+    return;
 }
-

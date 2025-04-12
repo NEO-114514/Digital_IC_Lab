@@ -1,6 +1,6 @@
 Dependencies for Project 'Code', Target 'DesignStart': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\lib.h)(0x670F892E)()
-F (.\main.c)(0x670F8978)(--c99 -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\Software-IE:\Keil_v5\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="536" -DARMCM3-o .\main.o --omf_browse .\main.crf --depend .\main.d)
-I (..\Software\lib.h)(0x670F892E)
+F (.\lib.h)(0x678364E2)()
+F (.\main.c)(0x678F4AF4)(--c99 -c --cpu Cortex-M3 --li -g -O0 --apcs=interwork --split_sections -I ..\Software-IE:\Keil_v5\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM3\Include-D__UVISION_VERSION="536" -DARMCM3-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (..\Software\lib.h)(0x678364E2)
 F (.\cmdsasm.s)(0x670F839E)(--cpu Cortex-M3 --li -g --apcs=interwork -IE:\Keil_v5\Packs\ARM\CMSIS\5.8.0\Device\ARM\ARMCM3\Include--pd "__UVISION_VERSION SETA 536" --pd "ARMCM3 SETA 1"-o .\cmdsasm.o --depend .\cmdsasm.d)

@@ -2,8 +2,8 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Oct 17 12:46:34 2024
-# Process ID: 13096
+# Start of session at: Tue Jan 21 16:47:41 2025
+# Process ID: 41644
 # Current directory: D:/Digital_IC/Digital_IC_Lab/Lab1_LED/Lab1_LED.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source D:/Digital_IC/Digital_IC_Lab/Lab1_LED/Lab1_LED.sim/sim_1/behav/xsim/xsim.dir/ARMSOC_TOP_TB_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/Digital_IC/Digital_IC_Lab/Lab1_LED/Lab1_LED.sim/sim_1/behav/xsim/webtalk.log

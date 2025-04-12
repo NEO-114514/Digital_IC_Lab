@@ -2,13 +2,13 @@
 2019.1
 May 24 2019
 15:06:07
-D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2BRAM.v,1726901814,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v,,AHB2MEM,,,,,,,,
+D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2BRAM.v,1726901814,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBDCD.v,,AHB2MEM,,,,,,,,
 D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v,1728555835,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v,,AHB2KEY,,,,,,,,
-D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v,1727339384,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBDCD.v,,AHB2LED,,,,,,,,
+D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v,1727339384,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v,,AHB2LED,,,,,,,,
 D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBDCD.v,1500359074,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBMUX.v,,AHBDCD,,,,,,,,
-D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBMUX.v,1379313012,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP.v,,AHBMUX,,,,,,,,
-D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP.v,1727413123,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/CORTEXM3INTEGRATIONDS.v,,ARMSOC_TOP,,,,,,,,
-D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP_TB.v,1727536889,verilog,,,,ARMSOC_TOP_TB,,,,,,,,
-D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/CORTEXM3INTEGRATIONDS.v,1500376678,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v,,CORTEXM3INTEGRATIONDS,,,,,,,,
-D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v,1500376680,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP_TB.v,,cortexm3ds_logic,,,,,,,,
+D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBMUX.v,1379313012,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v,,AHBMUX,,,,,,,,
+D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP.v,1727413123,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2BRAM.v,,ARMSOC_TOP,,,,,,,,
+D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP_TB.v,1727536889,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/CortexM3-DS-sim/CORTEXM3INTEGRATIONDS.v,,ARMSOC_TOP_TB,,,,,,,,
+D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/CortexM3-DS-sim/CORTEXM3INTEGRATIONDS.v,1500376678,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/CortexM3-DS-sim/cortexm3ds_logic.v,,CORTEXM3INTEGRATIONDS,,,,,,,,
+D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/CortexM3-DS-sim/cortexm3ds_logic.v,1500376680,verilog,,D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP.v,,cortexm3ds_logic,,,,,,,,
 D:/Digital_IC/Digital_IC_Lab/Lab1_LED/Lab1_LED.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,

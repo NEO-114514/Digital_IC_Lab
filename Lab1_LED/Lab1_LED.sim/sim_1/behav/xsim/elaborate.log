@@ -1,30 +1,7 @@
 Vivado Simulator 2019.1
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: E:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 51ed62565d224bedbb4b1db582150312 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ARMSOC_TOP_TB_behav xil_defaultlib.ARMSOC_TOP_TB xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
+Running: E:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 51ed62565d224bedbb4b1db582150312 --incr --debug typical --relax --mt 16 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot ARMSOC_TOP_TB_behav xil_defaultlib.ARMSOC_TOP_TB xil_defaultlib.glbl -log elaborate.log 
+Using 16 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/ARMSOC_TOP.v" Line 37. Module ARMSOC_TOP doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/CORTEXM3INTEGRATIONDS.v" Line 24. Module CORTEXM3INTEGRATIONDS doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/cortexm3ds_logic.v" Line 27. Module cortexm3ds_logic doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2BRAM.v" Line 11. Module AHB2MEM doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBDCD.v" Line 38. Module AHBDCD doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHBMUX.v" Line 38. Module AHBMUX doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2BRAM.v" Line 11. Module AHB2MEM doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2LED.v" Line 1. Module AHB2LED doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "D:/Digital_IC/Digital_IC_Lab/Lab1_LED/FPGA/AHB2KEY.v" Line 1. Module AHB2KEY doesn't have a timescale but at least one module in design has a timescale.
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module unisims_ver.BUFG
-Compiling module xil_defaultlib.cortexm3ds_logic
-Compiling module xil_defaultlib.CORTEXM3INTEGRATIONDS
-Compiling module xil_defaultlib.AHB2MEM
-Compiling module xil_defaultlib.AHBDCD
-Compiling module xil_defaultlib.AHBMUX
-Compiling module xil_defaultlib.AHB2LED
-Compiling module xil_defaultlib.AHB2KEY
-Compiling module xil_defaultlib.ARMSOC_TOP
-Compiling module xil_defaultlib.ARMSOC_TOP_TB
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot ARMSOC_TOP_TB_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

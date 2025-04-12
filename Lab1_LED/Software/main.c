@@ -20,7 +20,7 @@ int main()
 {
 
     LED_REG = 0;
-    MASK_REG = 0xF0;
+    MASK_REG = 0x00;
     while (1)
     {
 			if(KEY_REG==0x01)

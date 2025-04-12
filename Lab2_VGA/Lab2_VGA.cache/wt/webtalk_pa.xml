@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Nov 20 22:44:34 2024">
+<application name="pa" timeStamp="Wed Jan 22 04:47:02 2025">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="fda459eece094f4fa35686e9e4dc5023" type="ProjectID"/>
 <property name="ProjectIteration" value="171" type="ProjectIteration"/>
@@ -77,7 +77,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES" value="1" type="GuiHandlerData"/>
 <property name="BaseDialogUtils_OPEN_IN_SPECIFIED_LAYOUT" value="2" type="GuiHandlerData"/>
 <property name="BaseDialog_APPLY" value="25" type="GuiHandlerData"/>
-<property name="BaseDialog_CANCEL" value="29" type="GuiHandlerData"/>
+<property name="BaseDialog_CANCEL" value="30" type="GuiHandlerData"/>
 <property name="BaseDialog_NO" value="10" type="GuiHandlerData"/>
 <property name="BaseDialog_OK" value="241" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="16" type="GuiHandlerData"/>
@@ -126,11 +126,12 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="LogMonitor_SELECT_ALL" value="1" type="GuiHandlerData"/>
 <property name="LogPanel_LOG_NAVIGATOR" value="7" type="GuiHandlerData"/>
 <property name="MainMenuMgr_EDIT" value="4" type="GuiHandlerData"/>
-<property name="MainMenuMgr_FILE" value="2" type="GuiHandlerData"/>
+<property name="MainMenuMgr_FILE" value="4" type="GuiHandlerData"/>
 <property name="MainMenuMgr_FLOORPLANNING" value="5" type="GuiHandlerData"/>
 <property name="MainMenuMgr_FLOW" value="10" type="GuiHandlerData"/>
 <property name="MainMenuMgr_IO_PLANNING" value="5" type="GuiHandlerData"/>
-<property name="MainMenuMgr_PROJECT" value="1" type="GuiHandlerData"/>
+<property name="MainMenuMgr_OPEN_RECENT_PROJECT" value="3" type="GuiHandlerData"/>
+<property name="MainMenuMgr_PROJECT" value="2" type="GuiHandlerData"/>
 <property name="MainMenuMgr_REPORTS" value="8" type="GuiHandlerData"/>
 <property name="MainMenuMgr_TIMING" value="4" type="GuiHandlerData"/>
 <property name="MainMenuMgr_TOOLS" value="28" type="GuiHandlerData"/>
@@ -268,9 +269,9 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WriteCfgMemFileDialog_SPECIFY_CONFIGURATION_FILENAME" value="2" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="47" type="GuiMode"/>
+<property name="GuiMode" value="66" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="37" type="TclMode"/>
+<property name="TclMode" value="54" type="TclMode"/>
 </item>
 </section>
 </application>

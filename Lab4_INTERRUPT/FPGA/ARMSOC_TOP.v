@@ -130,6 +130,8 @@ module ARMSOC_TOP (
     .clk_out1(clk_div)
     );
 
+
+
     BUFG BUFG_CLK (
         .O(fclk),
         .I(clk_div)
